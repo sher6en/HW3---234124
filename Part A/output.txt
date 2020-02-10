@@ -1,0 +1,34 @@
+
+TEST 1.1
+[Israel/Song_Israel/175/Singer_Israel]
+
+TEST 1.2
+[UK/Song_UK/170/Singer_UK]
+[Australia/Song_Australia/180/Singer_Australia]
+
+TEST 1.3
+Israel
+Song_Israel
+175
+Singer_Israel
+
+TEST 1.4
+0
+
+TEST 1.5
+[Israel/new_name/140/new_singer]
+[Israel/Song_Israel/175/Singer_Israel]
+
+TEST 1.9
+[UK/Song_UK/170/Singer_UK]
+[UK/Song_UK/169/Singer_UK]
+[France/Song_France/190/Singer_France]
+[France/Song_France/179/Singer_France]
+------------------------------
+
+TEST 1.11
+Israel
+1
+<Israel/Regular>
+1
+<Israel/Judge>

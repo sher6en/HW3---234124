@@ -6,13 +6,12 @@ using std::cout;
 using std::endl;
 
 //==============================================================================Participant functions:
-Participant::Participant(const string country_name, string song_name,
-                        int time_length, string singer_name):
-            country_name(country_name), song_name(song_name), registered(false)
-            time_length(time_length), singer_name(singer_name) {}
+Participant::Participant(string country_name, string song_name,
+                        int time_length, string singer_name) :
+            country_name(country_name), song_name(song_name), time_length(time_length), singer_name(singer_name),
+            registered(false) {}
 
-Participant::std::ostream& operator<<(std::ostream& os,
-        const Participant& participant) {
+std::ostream& operator<<(std::ostream& os, const Participant& participant) {
     os << "[" << participant.country_name
         << "/" << participant.song_name
         << "/" << participant.time_length
@@ -42,12 +41,15 @@ bool Participant::isRegistered() {
 }
 
 void Participant::update(string song_name, int time_length, string singer_name){
+    if (this->isRegistered()) {
+        return;
+    }
     if (song_name != "")
-        self.song_name = song_name;
-    if (time_length !=0)
-        self.time_lenght = time_length;
+        this->song_name = song_name;
+    if (time_length != 0)
+        this->time_length = time_length;
     if (singer_name != "")
-        self.singer_name = singer_name;
+        this->singer_name = singer_name;
 }
 
 void Participant::updateRegistered(bool condition) {
@@ -62,7 +64,8 @@ Voter::Voter(string country_name, VoterType type) :
              country_name(country_name), type(type), number_of_votes(0) {}
 
 std::ostream& operator<<(std::ostream& os, const Voter& voter) {
-    os <<"<"<< voter.state() <<"/"<< voter.voterType() <<">";
+    string type_of_voter = (voter.voterType() == Regular) ? "Regular" : "Judge"; //Check collision with all.
+    os <<"<"<< voter.state() <<"/"<< type_of_voter <<">";
     return os;
 }
 

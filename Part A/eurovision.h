@@ -19,18 +19,18 @@ enum VoterType { All, Regular, Judge };
 class Participant
 {
 // relevant private members can be defined here, if necessary.
-    const string country_name;
+    string country_name;
     string song_name;
     int time_length;
     string singer_name;
     bool registered;
 
 public:
-    Participant(const string country_name, string song_name, int time_length,
+    Participant(string country_name, string song_name, int time_length,
             string singer_name);
     Participant() = delete;
     ~Participant() = default;
-    std::ostream& operator<<(std::ostream& os, const Participant& participant);
+    friend std::ostream& operator<<(std::ostream& os, const Participant& participant);
     string state();
     string song();
     int timeLength();
