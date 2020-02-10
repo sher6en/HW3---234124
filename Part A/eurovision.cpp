@@ -5,7 +5,58 @@
 using std::cout;
 using std::endl;
 
-//Voter functions:
+//==============================================================================Participant functions:
+Participant::Participant(const string country_name, string song_name,
+                        int time_length, string singer_name):
+            country_name(country_name), song_name(song_name), registered(false)
+            time_length(time_length), singer_name(singer_name) {}
+
+Participant::std::ostream& operator<<(std::ostream& os,
+        const Participant& participant) {
+    os << "[" << participant.country_name
+        << "/" << participant.song_name
+        << "/" << participant.time_length
+        << "/" << participant.singer_name
+        << "]";
+    return os;
+}
+
+string Participant::state() {
+    return country_name;
+}
+
+string Participant::song() {
+    return song_name;
+}
+
+int Participant::timeLength() {
+    return time_length;
+}
+
+string Participant::singer() {
+    return singer_name;
+}
+
+bool Participant::isRegistered() {
+    return registered;
+}
+
+void Participant::update(string song_name, int time_length, string singer_name){
+    if (song_name != "")
+        self.song_name = song_name;
+    if (time_length !=0)
+        self.time_lenght = time_length;
+    if (singer_name != "")
+        self.singer_name = singer_name;
+}
+
+void Participant::updateRegistered(bool condition) {
+    registered = condition;
+}
+//==============================================================================End of Participant functions.
+
+
+//==============================================================================Voter functions:
 
 Voter::Voter(string country_name, VoterType type) :
              country_name(country_name), type(type), number_of_votes(0) {}
@@ -32,4 +83,4 @@ VoterType Voter::voterType() const {
     return type;
 }
 
-//End of Voter functions.
+//==============================================================================End of Voter functions.

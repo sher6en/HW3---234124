@@ -15,12 +15,30 @@ enum VoterType { All, Regular, Judge };
 /*enum Phase { Registration, Contest, Voting };*/
 
 //---------------------------------------------------
-/*
+
 class Participant
 {
 // relevant private members can be defined here, if necessary.
+    const string country_name;
+    string song_name;
+    int time_length;
+    string singer_name;
+    bool registered;
 
-public :
+public:
+    Participant(const string country_name, string song_name, int time_length,
+            string singer_name);
+    Participant() = delete;
+    ~Participant() = default;
+    std::ostream& operator<<(std::ostream& os, const Participant& participant);
+    string state();
+    string song();
+    int timeLength();
+    string singer();
+    bool isRegistered();
+    void update(string song_name, int time_length, string singer_name);
+    void updateRegistered(bool condition);
+
 
 // need to define here possibly c'tr and d'tr and ONLY methods that
 // are mentioned and demonstrated in the test example that has been published.
@@ -29,7 +47,7 @@ public :
 // NO friend is allowed here.
 
 };
-*/
+
 //---------------------------------------------------
 
 
