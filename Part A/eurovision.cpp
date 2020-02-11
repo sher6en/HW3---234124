@@ -9,7 +9,7 @@ using std::endl;
 Participant::Participant(string country_name, string song_name,
                         int time_length, string singer_name) :
             country_name(country_name), song_name(song_name), time_length(time_length), singer_name(singer_name),
-            registered(false) {}
+            registered(false), votes(0) {}
 
 std::ostream& operator<<(std::ostream& os, const Participant& participant) {
     os << "[" << participant.country_name

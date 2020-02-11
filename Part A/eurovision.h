@@ -12,7 +12,7 @@ using std::string;
 //---------------------------------------------------
 
 enum VoterType { All, Regular, Judge };
-/*enum Phase { Registration, Contest, Voting };*/
+enum Phase { Registration, Contest, Voting };
 
 //---------------------------------------------------
 
@@ -30,7 +30,7 @@ public:
             string singer_name);
     Participant() = delete;
     ~Participant() = default;
-    friend std::ostream& operator<<(std::ostream& os, const Participant& participant);
+    friend std::ostream& operator<<(std::ostream& os, const Participant& participant); //Check how to remove friend because its not allowed.
     string state();
     string song();
     int timeLength();
@@ -61,7 +61,7 @@ public:
 
     Voter(string country_name, VoterType type = Regular);
     ~Voter() = default;
-    friend std::ostream& operator<<(std::ostream& os, const Voter& voter); //Doesn't there need to be a deceleration? + I don't think this needs friend
+    friend std::ostream& operator<<(std::ostream& os, const Voter& voter); //Check how to remove friend because its not allowed.
     Voter& operator++(); //Check if "return this;" is good. + I think this needs friend.
 
     string state() const;
@@ -71,7 +71,7 @@ public:
 
 
 // -----------------------------------------------------------
-/*
+
 struct Vote
 {
 
@@ -81,21 +81,38 @@ struct Vote
 
 	Participant reciver;
 	Voter giver;
-
-	Vote(Participant participant, Voter voter) : reciver(participant), giver(voter){ };
-	//Check if this need a copy constructor from Participant and Voter
-	//and this may cause problems.
+	
+	//Check if there really needs to be a 10 argument c'tor with 9 default arguments.
+	Vote(Participant participant, Voter voter) : reciver(participant), giver(voter) {}
 	~Vote() = default;
 };
-*/
+
 // -----------------------------------------------------------
-/*
+
 
 class MainControl
 {
-// relevant private members can be defined here, if necessary.
 
-public :
+	Participant* participants; //participants[i] = i'th participant.
+	int votes; //votes[i] = votes given to i'th participant.
+	Phase current_phase;
+	int max_participants;
+	int max_song_time;
+	int max_vote_amount;
+
+public:
+
+	MainControl(int song_time = 180, int max_participants = 26, int max_vote_amount = 5);
+	~MainControl();
+	
+	MainControl& operator+=(const Participant& participant); //Check if const place is correct.
+	MainControl& operator+=(const Vote& vote);
+	MainControl& operator-=(const Participant& participant);
+	friend operator<<(std::ostream& os, const MainControl& system);
+	
+	void setPhase(Phase phase);
+	bool legalParticipant(const Participant& participant) const;
+	bool participate(string state_name) const;
 
 // need to define here possibly c'tr and d'tr and ONLY methods that
 // are mentioned and demonstrated in the test example that has been published.
@@ -104,7 +121,7 @@ public :
 // Also it's allowed here to define friend.
 
 };
-*/
+
 // -----------------------------------------------------------
 
 #endif
