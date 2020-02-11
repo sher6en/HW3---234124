@@ -108,7 +108,7 @@ public:
 	MainControl& operator+=(const Participant& participant); //Check if const place is correct.
 	MainControl& operator+=(const Vote& vote);
 	MainControl& operator-=(const Participant& participant);
-	friend operator<<(std::ostream& os, const MainControl& system);
+	friend std::ostream& operator<<(std::ostream& os, const MainControl& system);
 	
 	void setPhase(Phase phase);
 	bool legalParticipant(const Participant& participant) const;
