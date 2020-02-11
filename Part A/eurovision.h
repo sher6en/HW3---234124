@@ -93,8 +93,8 @@ struct Vote
 class MainControl
 {
 
-	Participant* participants; //participants[i] = i'th participant.
-	int votes; //votes[i] = votes given to i'th participant.
+	Participant** participants; //participants[i] = i'th participant.
+	int* votes; //votes[i] = votes given to i'th participant.
 	Phase current_phase;
 	int max_participants;
 	int max_song_time;

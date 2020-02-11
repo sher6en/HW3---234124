@@ -87,3 +87,50 @@ VoterType Voter::voterType() const {
 }
 
 //==============================================================================End of Voter functions.
+
+//==============================================================================MainControl functions:
+
+MainControl::MainControl(int song_time, int max_participants, int max_vote_amount) : //Check default argument decleraction doesnt need to be here.
+					participants(new Participant* [max_participants]), votes(new int [max_participants]),
+					current_phase(Registration), max_participants(max_participants), max_song_time(song_time),
+					max_vote_amount(max_vote_amount) {
+						for (int i = 0; i<max_participants; i++) {
+							participants[i] = NULL; //Check this is actually needed.
+						}
+					}
+MainControl::~MainControl() {
+	delete[] participants;
+	delete[] votes;
+}
+
+//==============================================================================End of MainControl functions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
