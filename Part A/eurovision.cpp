@@ -103,6 +103,24 @@ MainControl::~MainControl() {
 	delete[] votes;
 }
 
+void MainControl::setPhase(Phase phase) { //Check this works.
+	if (current_phase==Registration && phase==Contest){
+		current_phase = phase;
+	}
+	else if (current_phase==Contest && phase==Voting){
+		current_phase = phase;
+	}
+}
+
+bool MainControl::participate(string state_name) const{
+	for (int i = 0; i<max_participants; i++) {
+		if (participants[i]->state() == state_name) {
+			return true;
+		}
+	}
+	return false;
+}
+
 //==============================================================================End of MainControl functions.
 
 
