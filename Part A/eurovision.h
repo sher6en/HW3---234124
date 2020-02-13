@@ -30,23 +30,22 @@ public:
             string singer_name);
     Participant() = delete;
     ~Participant() = default;
-    friend std::ostream& operator<<(std::ostream& os, const Participant& participant); //Check how to remove friend because its not allowed.
-    string state();
-    string song();
-    int timeLength();
-    string singer();
-    bool isRegistered();
+ //Check how to remove friend because its not allowed.
+    string state() const;
+    string song() const;
+    int timeLength() const;
+    string singer() const;
+    bool isRegistered() const;
     void update(string song_name, int time_length, string singer_name);
     void updateRegistered(bool condition);
-
-
 // need to define here possibly c'tr and d'tr and ONLY methods that
 // are mentioned and demonstrated in the test example that has been published.
 // NO OTHER METHODS SHOULD APPEAR HERE.
 
 // NO friend is allowed here.
-
 };
+
+std::ostream& operator<<(std::ostream& os,const Participant& participant);
 
 //---------------------------------------------------
 
@@ -60,15 +59,15 @@ class Voter
 public:
 
     Voter(string country_name, VoterType type = Regular);
-    ~Voter() = default;
-    friend std::ostream& operator<<(std::ostream& os, const Voter& voter); //Check how to remove friend because its not allowed.
-    Voter& operator++(); //Check if "return this;" is good. + I think this needs friend.
+    ~Voter() = default; //Check how to remove friend because its not allowed.
+    Voter& operator++();
 
     string state() const;
     int timesOfVotes() const;
     VoterType voterType() const;
 };
 
+std::ostream& operator<<(std::ostream& os, const Voter& voter);
 
 // -----------------------------------------------------------
 
@@ -79,7 +78,7 @@ struct Vote
 // need to define ONLY data members and c'tr and d'tr.
 // NO NEED to define anything else.
 
-	Participant reciver;
+	Participant reciver; //Change to string/array of strings.
 	Voter giver;
 	
 	//Check if there really needs to be a 10 argument c'tor with 9 default arguments.

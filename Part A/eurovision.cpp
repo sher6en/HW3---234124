@@ -12,31 +12,31 @@ Participant::Participant(string country_name, string song_name,
             registered(false) {}
 
 std::ostream& operator<<(std::ostream& os, const Participant& participant) {
-    os << "[" << participant.country_name
-        << "/" << participant.song_name
-        << "/" << participant.time_length
-        << "/" << participant.singer_name
+    os << "[" << participant.state()
+        << "/" << participant.song()
+        << "/" << participant.timeLength()
+        << "/" << participant.singer()
         << "]";
     return os;
 }
 
-string Participant::state() {
+string Participant::state() const {
     return country_name;
 }
 
-string Participant::song() {
+string Participant::song() const {
     return song_name;
 }
 
-int Participant::timeLength() {
+int Participant::timeLength() const {
     return time_length;
 }
 
-string Participant::singer() {
+string Participant::singer() const {
     return singer_name;
 }
 
-bool Participant::isRegistered() {
+bool Participant::isRegistered() const {
     return registered;
 }
 
@@ -90,12 +90,12 @@ VoterType Voter::voterType() const {
 
 //==============================================================================MainControl functions:
 
-MainControl::MainControl(int song_time, int max_participants, int max_vote_amount) : //Check default argument decleraction doesnt need to be here.
+MainControl::MainControl(int song_time, int max_participants, int max_vote_amount) : //Check if default argument decleractions really dont need to be here.
 					participants(new Participant* [max_participants]), votes(new int [max_participants]),
 					current_phase(Registration), max_participants(max_participants), max_song_time(song_time),
 					max_vote_amount(max_vote_amount) {
 						for (int i = 0; i<max_participants; i++) {
-							participants[i] = NULL; //Check this is actually needed.
+							participants[i] = NULL; //Check this is actually needed (If pointers are inisiated (knowing english is nice) to NULL).
 						}
 					}
 MainControl::~MainControl() {

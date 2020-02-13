@@ -39,7 +39,8 @@ template<typename InputIterator, typename Condition>
 int checkCondition(InputIterator first, InputIterator last, Condition condition){
     int counter = 0;
     while (!(first==last)) {
-        vector<int>::iterator temp = first;
+        vector<int>::iterator temp = first; //This isnt allowed :(, futhermore, why did i use a vectors iterator?
+		//The file says operator supports constractor: what does the constractor do?
         ++temp;
         while (!(temp==last)){
             if (condition(*first, *temp)) {
