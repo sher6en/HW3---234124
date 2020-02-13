@@ -93,8 +93,9 @@ VoterType Voter::voterType() const {
 MainControl::MainControl(int song_time, int max_participants, int max_vote_amount) : //Check if default argument decleractions really dont need to be here.
 					participants(new Participant* [max_participants]), votes(new int [max_participants]),
 					current_phase(Registration), max_participants(max_participants), max_song_time(song_time),
-					max_vote_amount(max_vote_amount) {
-						for (int i = 0; i<max_participants; i++) {
+					max_vote_amount(max_vote_amount), current_participants_number(0),
+					current_votes_number(0) {
+						for (int i=0; i<max_participants; i++) {
 							participants[i] = NULL; //Check this is actually needed (If pointers are inisiated (knowing english is nice) to NULL).
 						}
 					}
@@ -103,7 +104,57 @@ MainControl::~MainControl() {
 	delete[] votes;
 }
 
-void MainControl::setPhase(Phase phase) { //Check this works.
+bool MainControl::legalParticipant(const Participant& participant) const{
+    if (Participant::state(participant)=="" ||
+        Participant::song(participant)=="" ||
+        Participant::singer(participant)=="" ||
+        Participant::timeLength(participant)>max_song_time){  // Check if negative? Define as unsigned?
+        return false;
+    }
+    return true;
+}
+
+MainControl& MainControl::operator+=(const Participant& participant){
+    if (current_participants_number >= max_participants){
+        return *this;
+    }
+    if (current_phase != Registration){
+        return *this;
+    }
+    for (inr i=0; i<current_participants_number; i++){
+        if (Participant::state(participants[i]) == Participant::state(participant)){
+            return *this;
+        }
+    }
+    if (legalParticipant(participant)){
+        return *this;
+    }
+
+    participants[current_participants_number++] = participant;
+    return *this;
+}
+
+MainControl& MainControl::operator-=(const Participant& participant){
+    if (current_phase != Registration){
+        return *this;
+    }
+    bool is_participant_registered = false;
+    int i=0;
+    for (i=0; i<current_participants_number; i++){
+        if (participants[i] == participant){  // Check if need to define '==' operator
+            is_participant_registered = true;
+        }
+    }
+    if (!is_participant_registered){
+        return *this;
+    }
+
+    participants[i] = NULL;
+    current_participants_number--;
+    return *this;
+}
+
+void MainControl::setPhase(Phase phase) { //Check this works. Check if you can't go back (like from Con to Reg)
 	if (current_phase==Registration && phase==Contest){
 		current_phase = phase;
 	}
