@@ -4,8 +4,6 @@
 #include <iostream>
 #include <string>
 
-using std::string;
-
 // it's allowed to define here any using statements, according to needs.
 // do NOT define here : using namespace std;
 
@@ -15,6 +13,41 @@ enum VoterType { All, Regular, Judge };
 enum Phase { Registration, Contest, Voting };
 
 //---------------------------------------------------
+
+using std::cout;
+using std::endl;
+using std::cerr;
+using std::ostream;
+using std::string;
+
+//string CLASS:
+/*
+class string {
+	int length;
+	char* data;
+	static char* allocate_and_copy(const char* data, int size);
+	void verify_index(int index) const;
+public:
+	string(const char* str = ""); // string s1; or string s1 = "aa";
+	string(const string& str); // string s2(s1);
+	~string();
+	int size() const;
+	string& operator=(const string&); // s1 = s2;
+	string& operator+=(const string& str); // s1 += s2;
+	const char& operator[](int index) const; // s[5] for const s
+	char& operator[](int index); // s[5] for non-const s
+	friend ostream& operator<<(ostream&, const string&); // cout << s1;
+	friend bool operator==(const string&, const string&); // s1==s2
+	friend bool operator<(const string&, const string&); // s1<s2
+};
+
+bool operator!=(const string& str1, const string& str2);
+bool operator<=(const string& str1, const string& str2);
+bool operator>(const string& str1, const string& str2);
+bool operator>=(const string& str1, const string& str2);
+string operator+(const string& str1, const string& str2);
+*/
+//END OF string CLASS.
 
 class Participant
 {
@@ -28,7 +61,7 @@ class Participant
 public:
     Participant(string country_name, string song_name, int time_length,
             string singer_name);
-    Participant() = delete;
+    Participant() = delete; //Check if this is needed.
     ~Participant() = default;
     string state() const;
     string song() const;
@@ -78,12 +111,13 @@ struct Vote
 // need to define ONLY data members and c'tr and d'tr.
 // NO NEED to define anything else.
 
-	Participant receiver; //Change to string/array of strings.
-	Voter giver;
-	
-	//Check if there really needs to be a 10 argument c'tor with 9 default arguments.
-	Vote(Participant participant, Voter voter) : receiver(participant), giver(voter) {}
-	~Vote() = default;
+	Voter& voter;
+	string* states;
+
+	Vote(Voter& voter, string state1, string state2 = "", string state3 = "", string state4 = "",
+	    string state5 = "", string state6 = "", string state7 = "",
+		string state8 = "", string state9 = "", string state10 = "");
+	~Vote();
 };
 
 // -----------------------------------------------------------
@@ -93,9 +127,9 @@ class MainControl
 {
 
 	Participant** participants; //participants[i] = i'th participant.
-	int* votes; //votes[i] = votes given to i'th participant.
+	int* regular_votes; //votes[i] = votes given to i'th participant by regular voters.
+	int* judge_votes; //votes[i] = votes given to i'th participant by judges.
 	int current_participants_number;
-	int current_votes_number;
 	Phase current_phase;
 	int max_participants;
 	int max_song_time;
@@ -107,7 +141,7 @@ public:
 	~MainControl();  // Done.
 
 	MainControl& operator+=(const Participant& participant);  // Check if const place is correct. Done.
-	MainControl& operator+=(const Vote& vote);
+	MainControl& operator+=(const Vote& vote); //Cant be const because updating voter num of votes. Check if you cant change this.
 	MainControl& operator-=(const Participant& participant);  // Done.
 	friend std::ostream& operator<<(std::ostream& os, const MainControl& system);
 	
