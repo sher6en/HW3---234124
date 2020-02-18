@@ -2,7 +2,6 @@
 #define EUROVISION_H_
 
 #include <iostream>
-#include <string>
 
 // it's allowed to define here any using statements, according to needs.
 // do NOT define here : using namespace std;
@@ -18,57 +17,56 @@ using std::cout;
 using std::endl;
 using std::cerr;
 using std::ostream;
-using std::string;
 
-//string CLASS:
-/*
-class string {
+//String CLASS:
+
+class String {
 	int length;
 	char* data;
 	static char* allocate_and_copy(const char* data, int size);
 	void verify_index(int index) const;
 public:
-	string(const char* str = ""); // string s1; or string s1 = "aa";
-	string(const string& str); // string s2(s1);
-	~string();
+	String(const char* str = ""); // String s1; or String s1 = "aa";
+	String(const String& str); // String s2(s1);
+	~String();
 	int size() const;
-	string& operator=(const string&); // s1 = s2;
-	string& operator+=(const string& str); // s1 += s2;
+	String& operator=(const String&); // s1 = s2;
+	String& operator+=(const String& str); // s1 += s2;
 	const char& operator[](int index) const; // s[5] for const s
 	char& operator[](int index); // s[5] for non-const s
-	friend ostream& operator<<(ostream&, const string&); // cout << s1;
-	friend bool operator==(const string&, const string&); // s1==s2
-	friend bool operator<(const string&, const string&); // s1<s2
+	friend ostream& operator<<(ostream&, const String&); // cout << s1;
+	friend bool operator==(const String&, const String&); // s1==s2
+	friend bool operator<(const String&, const String&); // s1<s2
 };
 
-bool operator!=(const string& str1, const string& str2);
-bool operator<=(const string& str1, const string& str2);
-bool operator>(const string& str1, const string& str2);
-bool operator>=(const string& str1, const string& str2);
-string operator+(const string& str1, const string& str2);
-*/
-//END OF string CLASS.
+bool operator!=(const String& str1, const String& str2);
+bool operator<=(const String& str1, const String& str2);
+bool operator>(const String& str1, const String& str2);
+bool operator>=(const String& str1, const String& str2);
+String operator+(const String& str1, const String& str2);
+
+//END OF String CLASS.
 
 class Participant
 {
 // relevant private members can be defined here, if necessary.
-    string country_name;
-    string song_name;
+    String country_name;
+    String song_name;
     int time_length;
-    string singer_name;
+    String singer_name;
     bool registered;
 
 public:
-    Participant(string country_name, string song_name, int time_length,
-            string singer_name);
+    Participant(String country_name, String song_name, int time_length,
+            String singer_name);
     Participant() = delete; //Check if this is needed.
     ~Participant() = default;
-    string state() const;
-    string song() const;
+    String state() const;
+    String song() const;
     int timeLength() const;
-    string singer() const;
+    String singer() const;
     bool isRegistered() const;
-    void update(string song_name, int time_length, string singer_name);
+    void update(String song_name, int time_length, String singer_name);
     void updateRegistered(bool condition);
     Participant& operator= (Participant participant) = delete;
 // need to define here possibly c'tr and d'tr and ONLY methods that
@@ -85,17 +83,17 @@ std::ostream& operator<<(std::ostream& os,const Participant& participant);
 
 class Voter
 {
-	string country_name; //Possibly Const, Check.
+	String country_name; //Possibly Const, Check.
 	VoterType type;
 	int number_of_votes;
 
 public:
 
-    Voter(string country_name, VoterType type = Regular);
+    Voter(String country_name, VoterType type = Regular);
     ~Voter() = default;
     Voter& operator++();
 
-    string state() const;
+    String state() const;
     int timesOfVotes() const;
     VoterType voterType() const;
 };
@@ -112,11 +110,11 @@ struct Vote
 // NO NEED to define anything else.
 
 	Voter& voter;
-	string* states;
+	String* states;
 
-	Vote(Voter& voter, string state1, string state2 = "", string state3 = "", string state4 = "",
-	    string state5 = "", string state6 = "", string state7 = "",
-		string state8 = "", string state9 = "", string state10 = "");
+	Vote(Voter& voter, String state1, String state2 = "", String state3 = "", String state4 = "",
+	    String state5 = "", String state6 = "", String state7 = "",
+		String state8 = "", String state9 = "", String state10 = "");
 	~Vote();
 };
 
@@ -147,7 +145,7 @@ public:
 	
 	void setPhase(Phase phase);  // Done.
 	bool legalParticipant(const Participant& participant) const;  // Done.
-	bool participate(string state_name) const;  // Done.
+	bool participate(String state_name) const;  // Done.
 
 // need to define here possibly c'tr and d'tr and ONLY methods that
 // are mentioned and demonstrated in the test example that has been published.

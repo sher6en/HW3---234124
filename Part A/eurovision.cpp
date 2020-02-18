@@ -8,23 +8,23 @@ static void participant_bubbleSort(Participant** arr, int n);
 
 //==============================================================================End of helper functions delclerations.
 
-//==============================================================================string class functions:
-/*
+//==============================================================================String class functions:
+
 void error(const char* str) {
 	cerr << "Error: " << str << endl;
 	exit(0);
 }
 
-int strcmp(char* string1, char* string2)
+int strcmp(char* String1, char* String2)
 {
     for (int i = 0; ; i++)
     {
-        if (string1[i] != string2[i])
+        if (String1[i] != String2[i])
         {
-            return string1[i] < string2[i] ? -1 : 1;
+            return String1[i] < String2[i] ? -1 : 1;
         }
 
-        if (string1[i] == '\0')
+        if (String1[i] == '\0')
         {
             return 0;
         }
@@ -55,26 +55,26 @@ char* strcat(char * s1, const char * s2)
     return s1;
 }
 
-char* string::allocate_and_copy(const char* str, int size) {
+char* String::allocate_and_copy(const char* str, int size) {
 	return strcpy(new char[size + 1], str);
 }
 
-string::string(const char* str) {
+String::String(const char* str) {
 	length = strlen(str);
 	data = allocate_and_copy(str, length);
 }
-string::string(const string& str) :
+String::String(const String& str) :
 	length(str.size()),
 	data(allocate_and_copy(str.data, str.length)) {
 }
-string::~string() {
+String::~String() {
 	delete[] data;
 }
-int string::size() const {
+int String::size() const {
 	return length;
 }
 
-string& string::operator=(const string& str) {
+String& String::operator=(const String& str) {
 	if (this == &str) {
 		return *this;
 	}
@@ -83,7 +83,7 @@ string& string::operator=(const string& str) {
 	length = str.length;
 	return *this;
 }
-string& string::operator+=(const string& str) {
+String& String::operator+=(const String& str) {
 	char* new_data = allocate_and_copy(data, this->length + str.length);
 	strcat(new_data, str.data);
 	delete[] data;
@@ -91,50 +91,50 @@ string& string::operator+=(const string& str) {
 	data = new_data;
 	return *this;
 }
-void string::verify_index(int index) const {
+void String::verify_index(int index) const {
 	if (index >= size() || index < 0) {
 		error("Bad index");
 	}
 	return;
 }
-const char& string::operator[](int index) const {
+const char& String::operator[](int index) const {
 	verify_index(index);
 	return data[index];
 }
-char& string::operator[](int index) {
+char& String::operator[](int index) {
 	verify_index(index);
 	return data[index];
 }
-bool operator==(const string& str1, const string& str2) {
+bool operator==(const String& str1, const String& str2) {
 	return strcmp(str1.data, str2.data) == 0;
 }
-ostream& operator<<(ostream& os, const string& str) {
+ostream& operator<<(ostream& os, const String& str) {
 	return os << str.data;
 }
-bool operator<(const string& str1, const string& str2) {
+bool operator<(const String& str1, const String& str2) {
 	return strcmp(str1.data, str2.data) < 0;
 }
-bool operator!=(const string& str1, const string& str2) {
+bool operator!=(const String& str1, const String& str2) {
 	return !(str1 == str2);
 }
-bool operator<=(const string& str1, const string& str2) {
+bool operator<=(const String& str1, const String& str2) {
 	return (str1<str2 || str1==str2);
 }
-bool operator>(const string& str1, const string& str2) {
+bool operator>(const String& str1, const String& str2) {
 	return !(str1 <= str2);
 }
-bool operator>=(const string& str1, const string& str2) {
+bool operator>=(const String& str1, const String& str2) {
 	return !(str1 < str2);
 }
-string operator+(const string& str1, const string& str2) {
-	return string(str1) += str2;
+String operator+(const String& str1, const String& str2) {
+	return String(str1) += str2;
 }
-//==============================================================================string class functions.
-*/
+//==============================================================================String class functions.
+
 
 //==============================================================================Participant functions:
-Participant::Participant(string country_name, string song_name,
-                        int time_length, string singer_name) :
+Participant::Participant(String country_name, String song_name,
+                        int time_length, String singer_name) :
             country_name(country_name), song_name(song_name), time_length(time_length), singer_name(singer_name),
             registered(false) {}
 
@@ -147,11 +147,11 @@ std::ostream& operator<<(std::ostream& os, const Participant& participant) {
     return os;
 }
 
-string Participant::state() const {
+String Participant::state() const {
     return country_name;
 }
 
-string Participant::song() const {
+String Participant::song() const {
     return song_name;
 }
 
@@ -159,7 +159,7 @@ int Participant::timeLength() const {
     return time_length;
 }
 
-string Participant::singer() const {
+String Participant::singer() const {
     return singer_name;
 }
 
@@ -167,7 +167,7 @@ bool Participant::isRegistered() const {
     return registered;
 }
 
-void Participant::update(string song_name, int time_length, string singer_name){
+void Participant::update(String song_name, int time_length, String singer_name){
     if (this->isRegistered()) {
         return;
     }
@@ -186,11 +186,11 @@ void Participant::updateRegistered(bool condition) {
 
 
 //==============================================================================Voter functions:
-Voter::Voter(string country_name, VoterType type) :
+Voter::Voter(String country_name, VoterType type) :
              country_name(country_name), type(type), number_of_votes(0) {}
 
 std::ostream& operator<<(std::ostream& os, const Voter& voter) {
-    string type_of_voter = (voter.voterType() == Regular) ? "Regular" : "Judge"; //Check collision with all.
+    String type_of_voter = (voter.voterType() == Regular) ? "Regular" : "Judge"; //Check collision with all.
     os <<"<"<< voter.state() <<"/"<< type_of_voter <<">";
     return os;
 }
@@ -200,7 +200,7 @@ Voter& Voter::operator++() {
     return *this;
 }
 
-string Voter::state() const {
+String Voter::state() const {
     return country_name;
 }
 
@@ -215,9 +215,9 @@ VoterType Voter::voterType() const {
 
 
 //==============================================================================Vote functions:
-	Vote::Vote(Voter& voter, string state1, string state2, string state3, string state4, string state5,
-			string state6, string state7, string state8, string state9, string state10) : 
-			voter(voter), states(new string [10]){
+	Vote::Vote(Voter& voter, String state1, String state2, String state3, String state4, String state5,
+			String state6, String state7, String state8, String state9, String state10) : 
+			voter(voter), states(new String [10]){
 				states[0] = state1;
 				states[1] = state2;
 				states[2] = state3;
@@ -382,7 +382,7 @@ bool MainControl::legalParticipant(const Participant& participant) const{
     return true;
 }
 
-bool MainControl::participate(string state_name) const{
+bool MainControl::participate(String state_name) const{
 	for (int i = 0; i<current_participants_number; i++) {
 		if (participants[i]->state() == state_name) {
 			return true;
