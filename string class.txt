@@ -1,0 +1,138 @@
+using std::cout;
+using std::endl;
+using std::cerr;
+using std::ostream;
+
+//STRING CLASS:
+
+int strcmp(char* string1, char* string2)
+{
+    for (int i = 0; ; i++)
+    {
+        if (string1[i] != string2[i])
+        {
+            return string1[i] < string2[i] ? -1 : 1;
+        }
+
+        if (string1[i] == '\0')
+        {
+            return 0;
+        }
+    }
+}
+
+int strlen(const char* start) {
+   const char* end;
+   for (end = start; *end; end++);
+   return (end - start);
+}
+
+char* strcpy(char *c, const char* s)
+{
+    int i=0;
+    for(i=0;i<=strlen(s);i++)
+        c[i]=s[i];
+    return c;
+}
+
+char* strcat(char * s1, const char * s2)
+{
+	int i=0;
+    for(i=strlen(s2);i<strlen(s1);i++)
+        s1[i]=s2[i];
+    s1[++i]=0;
+    return s1;
+}
+
+class String {
+	int length;
+	char* data;
+	static char* allocate_and_copy(const char* data, int size);
+public:
+	String(const char* str = ""); // String s1; or String s1 = "aa";
+	String(const String& str); // String s2(s1);
+	~String();
+	int size() const;
+	String& operator=(const String&); // s1 = s2;
+	String& operator+=(const String& str); // s1 += s2;
+	const char& operator[](int index) const; // s[5] for const s
+	char& operator[](int index); // s[5] for non-const s
+	friend ostream& operator<<(ostream&, const String&); // cout << s1;
+	friend bool operator==(const String&, const String&); // s1==s2
+	friend bool operator<(const String&, const String&); // s1<s2
+};
+
+bool operator!=(const String& str1, const String& str2);
+bool operator<=(const String& str1, const String& str2);
+bool operator>(const String& str1, const String& str2);
+bool operator>=(const String& str1, const String& str2);
+String operator+(const String& str1, const String& str2);
+
+
+char* String::allocate_and_copy(const char* str, int size) {
+	return strcpy(new char[size + 1], str);
+}
+
+String::String(const char* str) {
+	length = strlen(str);
+	data = allocate_and_copy(str, length);
+}
+String::String(const String& str) :
+	length(str.size()),
+	data(allocate_and_copy(str.data, str.length)) {
+}
+String::~String() {
+	delete[] data;
+}
+int String::size() const {
+	return length;
+}
+
+String& String::operator=(const String& str) {
+	if (this == &str) {
+		return *this;
+	}
+	delete[] data;
+	data = allocate_and_copy(str.data, str.length);
+	length = str.length;
+	return *this;
+}
+String& String::operator+=(const String& str) {
+	char* new_data = allocate_and_copy(data, this->length + str.length);
+	strcat(new_data, str.data);
+	delete[] data;
+	length += str.length;
+	data = new_data;
+	return *this;
+}
+
+const char& String::operator[](int index) const {
+	return data[index];
+}
+char& String::operator[](int index) {
+	return data[index];
+}
+bool operator==(const String& str1, const String& str2) {
+	return strcmp(str1.data, str2.data) == 0;
+}
+ostream& operator<<(ostream& os, const String& str) {
+	return os << str.data;
+}
+bool operator<(const String& str1, const String& str2) {
+	return strcmp(str1.data, str2.data) < 0;
+}
+bool operator!=(const String& str1, const String& str2) {
+	return !(str1 == str2);
+}
+bool operator<=(const String& str1, const String& str2) {
+	return (str1<str2 || str1==str2);
+}
+bool operator>(const String& str1, const String& str2) {
+	return !(str1 <= str2);
+}
+bool operator>=(const String& str1, const String& str2) {
+	return !(str1 < str2);
+}
+String operator+(const String& str1, const String& str2) {
+	return String(str1) += str2;
+}

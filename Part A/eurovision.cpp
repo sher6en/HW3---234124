@@ -235,6 +235,9 @@ MainControl::MainControl(int song_time, int max_participants, int max_vote_amoun
 						}
 					}
 MainControl::~MainControl() {
+	for (int i = 0; i<current_participants_number; i++){
+		participants[i]->updateRegistered(false);
+	}
 	delete[] participants;
 	delete[] regular_votes;
 	delete[] judge_votes;

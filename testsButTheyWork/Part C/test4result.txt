@@ -1,0 +1,71 @@
+Green Room-> line: 75, chair: 90
+Green Room-> line: 58, chair: 10
+Green Room-> line: 83, chair: 6
+Green Room-> line: 6, chair: 20
+Green Room-> line: 52, chair: 89
+Green Room-> line: 39, chair: 82
+Green Room-> line: 76, chair: 11
+Green Room-> line: 35, chair: 71
+Green Room-> line: 55, chair: 41
+Green Room-> line: 60, chair: 54
+Green Room-> line: 36, chair: 78
+Middle-> area: G, line: 21, chair: 88
+Middle-> area: H, line: 33, chair: 15
+Middle-> area: A, line: 95, chair: 35
+Middle-> area: G, line: 70, chair: 70
+Middle-> area: G, line: 88, chair: 98
+Middle-> area: F, line: 43, chair: 17
+Middle-> area: D, line: 47, chair: 62
+Middle-> area: F, line: 51, chair: 32
+Front-> area: H, line: 59, chair: 7
+Front-> area: C, line: 53, chair: 87
+Front-> area: E, line: 38, chair: 58
+Front-> area: E, line: 86, chair: 52
+Front-> area: C, line: 46, chair: 93
+Front-> area: J, line: 87, chair: 46
+Front-> area: H, line: 73, chair: 36
+Front-> area: D, line: 80, chair: 74
+Rear-> area: C, line: 37, chair: 48
+Rear-> area: F, line: 81, chair: 56
+Rear-> area: G, line: 74, chair: 51
+Golden Circle-> line: 91, chair: 3
+Golden Circle-> line: 49, chair: 27
+Golden Circle-> line: 66, chair: 67
+Golden Circle-> line: 22, chair: 81
+Golden Circle-> line: 48, chair: 47
+Golden Circle-> line: 57, chair: 86
+Golden Circle-> line: 64, chair: 83
+Disable Podium-> line: 16, chair: 5
+Disable Podium-> line: 41, chair: 37
+Disable Podium-> line: 54, chair: 91
+Disable Podium-> line: 72, chair: 84
+Disable Podium-> line: 45, chair: 8
+Disable Podium-> line: 5, chair: 85
+Disable Podium-> line: 501, chair: 856
+Disable Podium-> line: 499, chair: 42
+Disable Podium-> line: 809, chair: 128
+Disable Podium-> line: 1000, chair: 4
+Disable Podium-> line: 23, chair: 949
+Disable Podium-> line: 624, chair: 374
+Disable Podium-> line: 429, chair: 212
+Disable Podium-> line: 559, chair: 702
+Disable Podium-> line: 596, chair: 341
+Disable Podium-> line: 613, chair: 600
+Disable Podium-> line: 285, chair: 104
+Disable Podium-> line: 285, chair: 104
+Green Room-> line: 3, chair: 80
+Not For Sale !
+Front-> area: Z, line: 5, chair: 8
+650
+Middle-> area: J, line: 25, chair: 5
+450
+Rear-> area: O, line: 7, chair: 44
+190
+Golden Circle-> line: 2, chair: 130
+1620
+Disable Podium-> line: 1, chair: 5
+200
+Front-> area: L, line: 22, chair: 3
+612
+Disable Podium-> line: 1, chair: 1
+200
