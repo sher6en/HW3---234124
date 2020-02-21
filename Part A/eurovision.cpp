@@ -10,11 +10,6 @@ static void participant_bubbleSort(Participant** arr, int n);
 
 //==============================================================================String class functions:
 
-void error(const char* str) {
-	cerr << "Error: " << str << endl;
-	exit(0);
-}
-
 int strcmp(char* String1, char* String2)
 {
     for (int i = 0; ; i++)
@@ -32,17 +27,16 @@ int strcmp(char* String1, char* String2)
 }
 
 int strlen(const char* start) {
-   const char* end = start;
-   while(*end++ != 0);
-   return end - start;
+   const char* end;
+   for (end = start; *end; end++);
+   return (end - start);
 }
 
 char* strcpy(char *c, const char* s)
 {
     int i=0;
-    for(i=0;i<strlen(s);i++)
+    for(i=0;i<=strlen(s);i++)
         c[i]=s[i];
-    c[++i]=0;
     return c;
 }
 
@@ -91,18 +85,10 @@ String& String::operator+=(const String& str) {
 	data = new_data;
 	return *this;
 }
-void String::verify_index(int index) const {
-	if (index >= size() || index < 0) {
-		error("Bad index");
-	}
-	return;
-}
 const char& String::operator[](int index) const {
-	verify_index(index);
 	return data[index];
 }
 char& String::operator[](int index) {
-	verify_index(index);
 	return data[index];
 }
 bool operator==(const String& str1, const String& str2) {
@@ -243,6 +229,8 @@ MainControl::MainControl(int song_time, int max_participants, int max_vote_amoun
 					max_participants(max_participants), max_song_time(song_time), max_vote_amount(max_vote_amount) {
 						for (int i=0; i<max_participants; i++) {
 							participants[i] = NULL; //Check this is actually needed (If pointers are inisiated (knowing english is nice) to NULL).
+							regular_votes[i] = 0;
+							judge_votes[i] = 0;
 						}
 					}
 MainControl::~MainControl() {
@@ -291,10 +279,7 @@ MainControl& MainControl::operator+=(const Vote& vote) {
 	if (vote.voter.voterType() == Judge) {
 		if (vote.voter.timesOfVotes() < 1) {
 			for (int j = 0; j<10; j++){
-				for (int i = 0; i<max_participants; i++){
-					if (!participants[i]){
-						continue;
-					}
+				for (int i = 0; i<current_participants_number; i++){
 					if(vote.states[j] == participants[i]->state()){
 						switch (j) {
 							case 0: judge_votes[i]+=12; break;

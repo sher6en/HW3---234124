@@ -24,7 +24,6 @@ class String {
 	int length;
 	char* data;
 	static char* allocate_and_copy(const char* data, int size);
-	void verify_index(int index) const;
 public:
 	String(const char* str = ""); // String s1; or String s1 = "aa";
 	String(const String& str); // String s2(s1);
