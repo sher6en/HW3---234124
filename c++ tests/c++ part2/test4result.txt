@@ -1,0 +1,202 @@
+[andora/song_andora/109/singer_andora]
+[greece/song_greece/205/singer_greece]
+[serbia/song_serbia/170/singer_serbia]
+[hungary/song_hungary/161/singer_hungary]
+[austria/song_austria/212/singer_austria]
+[russia/song_russia/126/singer_russia]
+[switzerland/song_switzerland/223/singer_switzerland]
+[ukraine/song_ukraine/107/singer_ukraine]
+[spain/song_spain/101/singer_spain]
+[cyrpus/song_cyrpus/173/singer_cyrpus]
+[russia/song_russia/122/singer_russia]
+[bulgaria/song_bulgaria/139/singer_bulgaria]
+[netherlands/song_netherlands/157/singer_netherlands]
+[ukraine/song_ukraine/163/singer_ukraine]
+[france/song_france/128/singer_france]
+[belarus/song_belarus/220/singer_belarus]
+[germany/song_germany/171/singer_germany]
+[moldova/song_moldova/127/singer_moldova]
+[bulgaria/song_bulgaria/109/singer_bulgaria]
+[norway/song_norway/151/singer_norway]
+[slovakia/song_slovakia/125/singer_slovakia]
+[bulgaria/song_bulgaria/226/singer_bulgaria]
+[luxembourg/song_luxembourg/163/singer_luxembourg]
+[hungary/song_hungary/165/singer_hungary]
+[lithiania/song_lithiania/107/singer_lithiania]
+[georgia/song_georgia/114/singer_georgia]
+[moldova/song_moldova/151/singer_moldova]
+[italy/song_italy/203/singer_italy]
+[germany/song_germany/128/singer_germany]
+[france/song_france/128/singer_france]
+[ireland/song_ireland/198/singer_ireland]
+[slovenia/song_slovenia/121/singer_slovenia]
+[norway/song_norway/140/singer_norway]
+[moldova/song_moldova/179/singer_moldova]
+[bosnia/song_bosnia/167/singer_bosnia]
+[belgium/song_belgium/144/singer_belgium]
+{
+Registration
+}
+
+{
+Registration
+[bosnia/song_bosnia/167/singer_bosnia]
+[germany/song_germany/171/singer_germany]
+[moldova/song_moldova/179/singer_moldova]
+[netherlands/song_netherlands/157/singer_netherlands]
+[norway/song_norway/151/singer_norway]
+[russia/new_song/122/singer_russia]
+[serbia/song_serbia/170/singer_serbia]
+[slovakia/new_song/125/newsinger]
+}
+
+{
+Registration
+[andora/new_song/109/singer_andora]
+[bosnia/song_bosnia/167/singer_bosnia]
+[cyrpus/song_cyrpus/173/singer_cyrpus]
+[france/new_song/128/singer_france]
+[germany/song_germany/171/singer_germany]
+[hungary/new_song/165/newsinger]
+[moldova/song_moldova/179/singer_moldova]
+[netherlands/song_netherlands/157/singer_netherlands]
+[norway/song_norway/151/singer_norway]
+[russia/new_song/122/singer_russia]
+[slovakia/new_song/125/newsinger]
+}
+
+[andora/new_song/109/singer_andora]
+[belgium/new_song/102/newsinger]
+[cyrpus/song_cyrpus/173/singer_cyrpus]
+[france/new_song/128/singer_france]
+[germany/song_germany/171/singer_germany]
+[hungary/new_song/165/newsinger]
+[moldova/song_moldova/179/singer_moldova]
+[netherlands/song_netherlands/157/singer_netherlands]
+[norway/song_norway/151/singer_norway]
+[russia/new_song/122/singer_russia]
+[serbia/song_serbia/170/singer_serbia]
+[slovakia/new_song/125/newsinger]
+[ukraine/new_song/107/singer_ukraine]
+[andora/new_song/109/singer_andora]
+[belgium/new_song/102/newsinger]
+[cyrpus/song_cyrpus/173/singer_cyrpus]
+[france/new_song/128/singer_france]
+[germany/song_germany/171/singer_germany]
+[hungary/new_song/165/newsinger]
+[moldova/song_moldova/179/singer_moldova]
+[netherlands/song_netherlands/157/singer_netherlands]
+[norway/song_norway/151/singer_norway]
+[russia/new_song/122/singer_russia]
+[serbia/song_serbia/170/singer_serbia]
+[slovakia/new_song/125/newsinger]
+[ukraine/new_song/107/singer_ukraine]
+[hungary/song_hungary/120/singer_hungary]
+[spain/song_spain/120/singer_spain]
+[georgia/song_georgia/120/singer_georgia]
+[france/new_song/128/singer_france]
+[cyrpus/song_cyrpus/173/singer_cyrpus]
+[netherlands/song_netherlands/157/singer_netherlands]
+[georgia/song_georgia/120/singer_georgia]
+[serbia/song_serbia/170/singer_serbia]
+[greece/song_greece/120/singer_greece]
+[russia/new_song/122/singer_russia]
+[ukraine/new_song/107/singer_ukraine]
+[russia/song_russia/120/singer_russia]
+[moldova/song_moldova/179/singer_moldova]
+[switzerland/song_switzerland/120/singer_switzerland]
+{
+Voting
+andora : Regular(0) Judge(0)
+belgium : Regular(0) Judge(0)
+cyrpus : Regular(0) Judge(0)
+france : Regular(0) Judge(0)
+germany : Regular(0) Judge(0)
+hungary : Regular(0) Judge(0)
+moldova : Regular(0) Judge(0)
+netherlands : Regular(0) Judge(0)
+norway : Regular(0) Judge(0)
+russia : Regular(0) Judge(0)
+serbia : Regular(0) Judge(0)
+slovakia : Regular(0) Judge(0)
+ukraine : Regular(0) Judge(0)
+}
+
+[georgia/shouldnot/143/error]
+[france/shouldnot/143/error]
+[ireland/shouldnot/143/error]
+[germany/song_germany/171/singer_germany]
+[serbia/song_serbia/170/singer_serbia]
+[georgia/shouldnot/143/error]
+[bulgaria/shouldnot/143/error]
+[hungary/new_song/165/newsinger]
+[bulgaria/shouldnot/143/error]
+[norway/song_norway/151/singer_norway]
+[cyrpus/song_cyrpus/173/singer_cyrpus]
+[georgia/shouldnot/143/error]
+[austria/shouldnot/143/error]
+[greece/shouldnot/143/error]
+{
+Voting
+andora : Regular(4) Judge(12)
+belgium : Regular(0) Judge(24)
+cyrpus : Regular(1) Judge(19)
+france : Regular(1) Judge(16)
+germany : Regular(2) Judge(0)
+hungary : Regular(3) Judge(0)
+moldova : Regular(3) Judge(10)
+netherlands : Regular(2) Judge(22)
+norway : Regular(3) Judge(0)
+russia : Regular(1) Judge(7)
+serbia : Regular(2) Judge(20)
+slovakia : Regular(1) Judge(12)
+ukraine : Regular(1) Judge(5)
+}
+
+andora
+norway
+moldova
+hungary
+serbia
+netherlands
+germany
+ukraine
+slovakia
+russia
+belgium
+netherlands
+serbia
+cyrpus
+france
+slovakia
+andora
+moldova
+russia
+ukraine
+netherlands
+belgium
+serbia
+cyrpus
+france
+andora
+slovakia
+moldova
+russia
+ukraine
+{
+Voting
+andora : Regular(4) Judge(12)
+belgium : Regular(0) Judge(24)
+cyrpus : Regular(1) Judge(19)
+france : Regular(1) Judge(16)
+germany : Regular(2) Judge(0)
+hungary : Regular(3) Judge(0)
+moldova : Regular(3) Judge(10)
+netherlands : Regular(2) Judge(22)
+norway : Regular(3) Judge(0)
+russia : Regular(1) Judge(7)
+serbia : Regular(2) Judge(20)
+slovakia : Regular(1) Judge(12)
+ukraine : Regular(1) Judge(5)
+}
+

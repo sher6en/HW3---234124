@@ -1,0 +1,161 @@
+[ukraine/song_ukraine/206/singer_ukraine]
+[israel/song_israel/111/singer_israel]
+[ukraine/song_ukraine/183/singer_ukraine]
+[austria/song_austria/143/singer_austria]
+[latvia/song_latvia/200/singer_latvia]
+[greece/song_greece/117/singer_greece]
+[ireland/song_ireland/154/singer_ireland]
+[kazakhastan/song_kazakhastan/154/singer_kazakhastan]
+[greece/song_greece/153/singer_greece]
+[russia/song_russia/193/singer_russia]
+[cyrpus/song_cyrpus/144/singer_cyrpus]
+[estonia/song_estonia/154/singer_estonia]
+[armenia/song_armenia/105/singer_armenia]
+[kazakhastan/song_kazakhastan/169/singer_kazakhastan]
+[uk/song_uk/194/singer_uk]
+[armenia/song_armenia/111/singer_armenia]
+[greece/song_greece/176/singer_greece]
+[ireland/song_ireland/108/singer_ireland]
+[austria/song_austria/193/singer_austria]
+[israel/song_israel/192/singer_israel]
+[switzerland/song_switzerland/227/singer_switzerland]
+[switzerland/song_switzerland/214/singer_switzerland]
+[spain/song_spain/160/singer_spain]
+[croatia/song_croatia/193/singer_croatia]
+[slovakia/song_slovakia/124/singer_slovakia]
+[bulgaria/song_bulgaria/195/singer_bulgaria]
+[greece/song_greece/156/singer_greece]
+[armenia/song_armenia/165/singer_armenia]
+[israel/song_israel/101/singer_israel]
+[cyrpus/song_cyrpus/162/singer_cyrpus]
+[andora/song_andora/160/singer_andora]
+[moldova/song_moldova/230/singer_moldova]
+[georgia/song_georgia/185/singer_georgia]
+[andora/song_andora/154/singer_andora]
+[estonia/song_estonia/163/singer_estonia]
+[moldova/song_moldova/201/singer_moldova]
+{
+Registration
+}
+
+{
+Registration
+[armenia/song_armenia/105/singer_armenia]
+[estonia/song_estonia/154/singer_estonia]
+[ireland/song_ireland/154/singer_ireland]
+[israel/new_song/111/newsinger]
+[kazakhastan/new_song/169/newsinger]
+}
+
+{
+Registration
+[armenia/song_armenia/105/singer_armenia]
+[austria/song_austria/143/singer_austria]
+[greece/song_greece/176/singer_greece]
+[ireland/song_ireland/154/singer_ireland]
+[israel/new_song/111/newsinger]
+[kazakhastan/new_song/169/newsinger]
+[slovakia/song_slovakia/124/singer_slovakia]
+[spain/song_spain/160/singer_spain]
+}
+
+[austria/song_austria/143/singer_austria]
+[greece/song_greece/176/singer_greece]
+[israel/new_song/111/newsinger]
+[kazakhastan/new_song/169/newsinger]
+[slovakia/song_slovakia/124/singer_slovakia]
+[spain/song_spain/160/singer_spain]
+[austria/song_austria/143/singer_austria]
+[greece/song_greece/176/singer_greece]
+[israel/new_song/111/newsinger]
+[kazakhastan/new_song/169/newsinger]
+[slovakia/song_slovakia/124/singer_slovakia]
+[spain/song_spain/160/singer_spain]
+[estonia/song_estonia/120/singer_estonia]
+[austria/song_austria/120/singer_austria]
+[moldova/new_song/120/newsinger]
+[ireland/song_ireland/120/singer_ireland]
+[uk/new_song/120/newsinger]
+[austria/song_austria/143/singer_austria]
+[ukraine/song_ukraine/120/singer_ukraine]
+[switzerland/new_song/120/singer_switzerland]
+[greece/song_greece/176/singer_greece]
+[andora/new_song/120/singer_andora]
+[kazakhastan/song_kazakhastan/120/singer_kazakhastan]
+[austria/song_austria/120/singer_austria]
+[armenia/song_armenia/120/singer_armenia]
+[latvia/new_song/120/newsinger]
+{
+Voting
+austria : Regular(0) Judge(0)
+greece : Regular(0) Judge(0)
+israel : Regular(0) Judge(0)
+kazakhastan : Regular(0) Judge(0)
+slovakia : Regular(0) Judge(0)
+spain : Regular(0) Judge(0)
+}
+
+[bulgaria/shouldnot/143/error]
+[israel/new_song/111/newsinger]
+[israel/shouldnot/143/error]
+[bulgaria/shouldnot/143/error]
+[cyrpus/shouldnot/143/error]
+[kazakhastan/new_song/169/newsinger]
+[cyrpus/shouldnot/143/error]
+[greece/shouldnot/143/error]
+[slovakia/song_slovakia/124/singer_slovakia]
+[moldova/shouldnot/143/error]
+[greece/shouldnot/143/error]
+[andora/shouldnot/143/error]
+[ireland/shouldnot/143/error]
+[armenia/shouldnot/143/error]
+{
+Voting
+austria : Regular(2) Judge(0)
+greece : Regular(0) Judge(0)
+israel : Regular(0) Judge(0)
+kazakhastan : Regular(1) Judge(6)
+slovakia : Regular(2) Judge(0)
+spain : Regular(0) Judge(22)
+}
+
+slovakia
+austria
+kazakhastan
+spain
+israel
+greece
+
+
+
+
+spain
+kazakhastan
+slovakia
+israel
+greece
+austria
+
+
+
+
+spain
+kazakhastan
+slovakia
+austria
+israel
+greece
+
+
+
+
+{
+Voting
+austria : Regular(2) Judge(0)
+greece : Regular(0) Judge(0)
+israel : Regular(0) Judge(0)
+kazakhastan : Regular(1) Judge(6)
+slovakia : Regular(2) Judge(0)
+spain : Regular(0) Judge(22)
+}
+

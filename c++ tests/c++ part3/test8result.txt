@@ -1,0 +1,63 @@
+Green Room-> line: 50, chair: 42
+Green Room-> line: 35, chair: 31
+Green Room-> line: 23, chair: 92
+Green Room-> line: 40, chair: 59
+Green Room-> line: 46, chair: 84
+Green Room-> line: 27, chair: 88
+Green Room-> line: 29, chair: 67
+Green Room-> line: 22, chair: 50
+Green Room-> line: 26, chair: 18
+Green Room-> line: 65, chair: 7
+Green Room-> line: 34, chair: 74
+Green Room-> line: 63, chair: 11
+Middle-> area: F, line: 3, chair: 2
+Middle-> area: I, line: 37, chair: 99
+Middle-> area: E, line: 74, chair: 38
+Middle-> area: E, line: 42, chair: 5
+Middle-> area: F, line: 69, chair: 56
+Middle-> area: H, line: 78, chair: 35
+Middle-> area: G, line: 100, chair: 57
+Middle-> area: G, line: 15, chair: 83
+Middle-> area: G, line: 53, chair: 95
+Middle-> area: I, line: 25, chair: 8
+Front-> area: G, line: 60, chair: 12
+Front-> area: G, line: 56, chair: 39
+Front-> area: I, line: 55, chair: 64
+Front-> area: H, line: 10, chair: 94
+Front-> area: J, line: 9, chair: 29
+Front-> area: H, line: 62, chair: 78
+Front-> area: A, line: 89, chair: 32
+Front-> area: H, line: 81, chair: 34
+Rear-> area: J, line: 32, chair: 52
+Rear-> area: C, line: 6, chair: 100
+Rear-> area: E, line: 20, chair: 60
+Rear-> area: D, line: 19, chair: 15
+Rear-> area: J, line: 43, chair: 61
+Rear-> area: B, line: 14, chair: 51
+Golden Circle-> line: 8, chair: 40
+Golden Circle-> line: 99, chair: 54
+Golden Circle-> line: 38, chair: 75
+Golden Circle-> line: 54, chair: 82
+Golden Circle-> line: 16, chair: 73
+Golden Circle-> line: 84, chair: 27
+Disable Podium-> line: 59, chair: 25
+Disable Podium-> line: 75, chair: 33
+Disable Podium-> line: 1, chair: 62
+Disable Podium-> line: 87, chair: 4
+Disable Podium-> line: 92, chair: 80
+Disable Podium-> line: 121, chair: 614
+Disable Podium-> line: 352, chair: 934
+Disable Podium-> line: 955, chair: 953
+Disable Podium-> line: 763, chair: 770
+Disable Podium-> line: 369, chair: 203
+Disable Podium-> line: 341, chair: 944
+Disable Podium-> line: 448, chair: 598
+Disable Podium-> line: 351, chair: 299
+Disable Podium-> line: 666, chair: 926
+Disable Podium-> line: 567, chair: 607
+Disable Podium-> line: 683, chair: 505
+Disable Podium-> line: 587, chair: 333
+Disable Podium-> line: 462, chair: 383
+Disable Podium-> line: 279, chair: 602
+Disable Podium-> line: 121, chair: 614
+200

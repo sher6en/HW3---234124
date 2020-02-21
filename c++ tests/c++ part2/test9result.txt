@@ -1,0 +1,173 @@
+[uk/song_uk/158/singer_uk]
+[malta/song_malta/138/singer_malta]
+[netherlands/song_netherlands/207/singer_netherlands]
+[uk/song_uk/171/singer_uk]
+[norway/song_norway/172/singer_norway]
+[spain/song_spain/116/singer_spain]
+[latvia/song_latvia/192/singer_latvia]
+[france/song_france/100/singer_france]
+[switzerland/song_switzerland/139/singer_switzerland]
+[andora/song_andora/129/singer_andora]
+[moldova/song_moldova/158/singer_moldova]
+[latvia/song_latvia/211/singer_latvia]
+[bosnia/song_bosnia/129/singer_bosnia]
+[kazakhastan/song_kazakhastan/154/singer_kazakhastan]
+[slovakia/song_slovakia/120/singer_slovakia]
+[belarus/song_belarus/207/singer_belarus]
+[turkey/song_turkey/132/singer_turkey]
+[luxembourg/song_luxembourg/144/singer_luxembourg]
+[sweden/song_sweden/228/singer_sweden]
+[turkey/song_turkey/219/singer_turkey]
+[slovakia/song_slovakia/168/singer_slovakia]
+[georgia/song_georgia/147/singer_georgia]
+[armenia/song_armenia/181/singer_armenia]
+[andora/song_andora/156/singer_andora]
+[cyrpus/song_cyrpus/144/singer_cyrpus]
+[ukraine/song_ukraine/130/singer_ukraine]
+[bosnia/song_bosnia/187/singer_bosnia]
+[italy/song_italy/177/singer_italy]
+[cyrpus/song_cyrpus/106/singer_cyrpus]
+[serbia/song_serbia/184/singer_serbia]
+[lithiania/song_lithiania/174/singer_lithiania]
+[kazakhastan/song_kazakhastan/174/singer_kazakhastan]
+[israel/song_israel/189/singer_israel]
+[austria/song_austria/119/singer_austria]
+[belgium/song_belgium/127/singer_belgium]
+[belgium/song_belgium/125/singer_belgium]
+{
+Registration
+}
+
+{
+Registration
+[andora/song_andora/129/singer_andora]
+[belgium/new_song/127/newsinger]
+[cyrpus/song_cyrpus/144/singer_cyrpus]
+[latvia/new_song/154/newsinger]
+[slovakia/song_slovakia/168/singer_slovakia]
+[spain/song_spain/116/singer_spain]
+[uk/song_uk/158/singer_uk]
+}
+
+{
+Registration
+[austria/song_austria/119/singer_austria]
+[belgium/new_song/127/newsinger]
+[cyrpus/song_cyrpus/144/singer_cyrpus]
+[france/new_song/100/newsinger]
+[kazakhastan/song_kazakhastan/174/singer_kazakhastan]
+[norway/song_norway/172/singer_norway]
+[spain/song_spain/116/singer_spain]
+[uk/song_uk/158/singer_uk]
+}
+
+[belgium/new_song/127/newsinger]
+[france/new_song/100/newsinger]
+[kazakhastan/song_kazakhastan/174/singer_kazakhastan]
+[lithiania/song_lithiania/174/singer_lithiania]
+[norway/song_norway/172/singer_norway]
+[slovakia/song_slovakia/120/singer_slovakia]
+[spain/song_spain/116/singer_spain]
+[uk/song_uk/158/singer_uk]
+[belgium/new_song/127/newsinger]
+[france/new_song/100/newsinger]
+[kazakhastan/song_kazakhastan/174/singer_kazakhastan]
+[lithiania/song_lithiania/174/singer_lithiania]
+[norway/song_norway/172/singer_norway]
+[slovakia/song_slovakia/120/singer_slovakia]
+[spain/song_spain/116/singer_spain]
+[uk/song_uk/158/singer_uk]
+[cyrpus/new_song/120/newsinger]
+[netherlands/song_netherlands/120/singer_netherlands]
+[spain/song_spain/116/singer_spain]
+[kazakhastan/song_kazakhastan/174/singer_kazakhastan]
+[norway/song_norway/172/singer_norway]
+[ukraine/new_song/120/singer_ukraine]
+[serbia/song_serbia/120/singer_serbia]
+[belgium/new_song/127/newsinger]
+[slovakia/song_slovakia/120/singer_slovakia]
+[sweden/song_sweden/120/singer_sweden]
+[latvia/new_song/120/newsinger]
+[israel/new_song/120/newsinger]
+[israel/new_song/120/newsinger]
+[latvia/song_latvia/120/singer_latvia]
+{
+Voting
+belgium : Regular(0) Judge(0)
+france : Regular(0) Judge(0)
+kazakhastan : Regular(0) Judge(0)
+lithiania : Regular(0) Judge(0)
+norway : Regular(0) Judge(0)
+slovakia : Regular(0) Judge(0)
+spain : Regular(0) Judge(0)
+uk : Regular(0) Judge(0)
+}
+
+[france/new_song/100/newsinger]
+[belgium/new_song/127/newsinger]
+[andora/shouldnot/143/error]
+[sweden/shouldnot/143/error]
+[netherlands/shouldnot/143/error]
+[uk/shouldnot/143/error]
+[armenia/shouldnot/143/error]
+[france/new_song/100/newsinger]
+[turkey/shouldnot/143/error]
+[bosnia/shouldnot/143/error]
+[serbia/shouldnot/143/error]
+[switzerland/shouldnot/143/error]
+[belgium/new_song/127/newsinger]
+[slovakia/song_slovakia/120/singer_slovakia]
+{
+Voting
+belgium : Regular(3) Judge(26)
+france : Regular(1) Judge(10)
+kazakhastan : Regular(2) Judge(15)
+lithiania : Regular(3) Judge(23)
+norway : Regular(1) Judge(10)
+slovakia : Regular(2) Judge(6)
+spain : Regular(0) Judge(20)
+uk : Regular(0) Judge(0)
+}
+
+lithiania
+belgium
+slovakia
+kazakhastan
+norway
+france
+uk
+spain
+
+
+belgium
+lithiania
+spain
+kazakhastan
+norway
+france
+slovakia
+uk
+
+
+belgium
+lithiania
+spain
+kazakhastan
+norway
+france
+slovakia
+uk
+
+
+{
+Voting
+belgium : Regular(3) Judge(26)
+france : Regular(1) Judge(10)
+kazakhastan : Regular(2) Judge(15)
+lithiania : Regular(3) Judge(23)
+norway : Regular(1) Judge(10)
+slovakia : Regular(2) Judge(6)
+spain : Regular(0) Judge(20)
+uk : Regular(0) Judge(0)
+}
+
