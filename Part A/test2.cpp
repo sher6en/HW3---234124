@@ -357,7 +357,7 @@ TEST("1.17")
   eurovision += Vote(vj1, "Cyprus", "UK", "Australia");
   /* example of voting of a Judge */
   cout << eurovision << endl;
-/*
+
 TEST("1.17.1")
 
   cout << eurovision(1, Regular) << endl;
@@ -381,6 +381,6 @@ TEST("1.17.3")
   cout << eurovision(3, All) << endl;
   cout << eurovision(4, All) << endl;
   cout << eurovision(5, All) << endl;
-*/
+
   return 0;
 }

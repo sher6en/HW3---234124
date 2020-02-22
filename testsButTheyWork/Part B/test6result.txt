@@ -1,0 +1,177 @@
+[ukraine/song_ukraine/226/singer_ukraine]
+[kazakhastan/song_kazakhastan/151/singer_kazakhastan]
+[austria/song_austria/145/singer_austria]
+[israel/song_israel/212/singer_israel]
+[armenia/song_armenia/217/singer_armenia]
+[armenia/song_armenia/210/singer_armenia]
+[greece/song_greece/154/singer_greece]
+[malta/song_malta/202/singer_malta]
+[ukraine/song_ukraine/228/singer_ukraine]
+[croatia/song_croatia/213/singer_croatia]
+[georgia/song_georgia/225/singer_georgia]
+[estonia/song_estonia/110/singer_estonia]
+[turkey/song_turkey/202/singer_turkey]
+[netherlands/song_netherlands/119/singer_netherlands]
+[spain/song_spain/206/singer_spain]
+[russia/song_russia/205/singer_russia]
+[turkey/song_turkey/176/singer_turkey]
+[bosnia/song_bosnia/202/singer_bosnia]
+[switzerland/song_switzerland/131/singer_switzerland]
+[malta/song_malta/158/singer_malta]
+[moldova/song_moldova/181/singer_moldova]
+[netherlands/song_netherlands/157/singer_netherlands]
+[spain/song_spain/148/singer_spain]
+[hungary/song_hungary/158/singer_hungary]
+[slovenia/song_slovenia/173/singer_slovenia]
+[ireland/song_ireland/192/singer_ireland]
+[slovakia/song_slovakia/115/singer_slovakia]
+[hungary/song_hungary/190/singer_hungary]
+[cyrpus/song_cyrpus/111/singer_cyrpus]
+[georgia/song_georgia/166/singer_georgia]
+[andora/song_andora/108/singer_andora]
+[norway/song_norway/195/singer_norway]
+[belarus/song_belarus/166/singer_belarus]
+[ireland/song_ireland/230/singer_ireland]
+[netherlands/song_netherlands/155/singer_netherlands]
+[estonia/song_estonia/131/singer_estonia]
+{
+Registration
+}
+
+{
+Registration
+[andora/new_song/108/singer_andora]
+[belarus/song_belarus/166/singer_belarus]
+[greece/song_greece/154/singer_greece]
+[hungary/new_song/171/newsinger]
+[kazakhastan/song_kazakhastan/151/singer_kazakhastan]
+[slovakia/song_slovakia/115/singer_slovakia]
+}
+
+{
+Registration
+[andora/new_song/108/singer_andora]
+[belarus/song_belarus/166/singer_belarus]
+[georgia/song_georgia/166/singer_georgia]
+[greece/song_greece/154/singer_greece]
+[hungary/new_song/171/newsinger]
+[kazakhastan/song_kazakhastan/151/singer_kazakhastan]
+[netherlands/new_song/157/singer_netherlands]
+[slovakia/song_slovakia/115/singer_slovakia]
+}
+
+[andora/new_song/108/singer_andora]
+[belarus/song_belarus/166/singer_belarus]
+[georgia/song_georgia/166/singer_georgia]
+[greece/song_greece/154/singer_greece]
+[hungary/new_song/171/newsinger]
+[kazakhastan/song_kazakhastan/151/singer_kazakhastan]
+[netherlands/new_song/157/singer_netherlands]
+[slovakia/song_slovakia/115/singer_slovakia]
+[switzerland/song_switzerland/131/singer_switzerland]
+[andora/new_song/108/singer_andora]
+[belarus/song_belarus/166/singer_belarus]
+[georgia/song_georgia/166/singer_georgia]
+[greece/song_greece/154/singer_greece]
+[hungary/new_song/171/newsinger]
+[kazakhastan/song_kazakhastan/151/singer_kazakhastan]
+[netherlands/new_song/157/singer_netherlands]
+[slovakia/song_slovakia/115/singer_slovakia]
+[switzerland/song_switzerland/131/singer_switzerland]
+[armenia/song_armenia/120/singer_armenia]
+[malta/song_malta/120/singer_malta]
+[armenia/song_armenia/120/singer_armenia]
+[ukraine/song_ukraine/120/singer_ukraine]
+[hungary/new_song/171/newsinger]
+[belarus/song_belarus/166/singer_belarus]
+[malta/song_malta/120/singer_malta]
+[bosnia/song_bosnia/120/singer_bosnia]
+[russia/song_russia/120/singer_russia]
+[belarus/song_belarus/166/singer_belarus]
+[switzerland/song_switzerland/131/singer_switzerland]
+[spain/song_spain/120/singer_spain]
+[netherlands/song_netherlands/120/singer_netherlands]
+[spain/song_spain/120/singer_spain]
+{
+Voting
+andora : Regular(0) Judge(0)
+belarus : Regular(0) Judge(0)
+georgia : Regular(0) Judge(0)
+greece : Regular(0) Judge(0)
+hungary : Regular(0) Judge(0)
+kazakhastan : Regular(0) Judge(0)
+netherlands : Regular(0) Judge(0)
+slovakia : Regular(0) Judge(0)
+switzerland : Regular(0) Judge(0)
+}
+
+[austria/shouldnot/143/error]
+[hungary/new_song/171/newsinger]
+[cyrpus/shouldnot/143/error]
+[hungary/shouldnot/143/error]
+[turkey/shouldnot/143/error]
+[belarus/song_belarus/166/singer_belarus]
+[estonia/shouldnot/143/error]
+[turkey/shouldnot/143/error]
+[turkey/shouldnot/143/error]
+[ireland/shouldnot/143/error]
+[hungary/shouldnot/143/error]
+[malta/shouldnot/143/error]
+[switzerland/song_switzerland/131/singer_switzerland]
+[ireland/shouldnot/143/error]
+{
+Voting
+andora : Regular(0) Judge(0)
+belarus : Regular(1) Judge(15)
+georgia : Regular(0) Judge(10)
+greece : Regular(1) Judge(10)
+hungary : Regular(0) Judge(0)
+kazakhastan : Regular(2) Judge(0)
+netherlands : Regular(0) Judge(0)
+slovakia : Regular(0) Judge(14)
+switzerland : Regular(0) Judge(0)
+}
+
+kazakhastan
+greece
+belarus
+switzerland
+slovakia
+netherlands
+hungary
+georgia
+andora
+
+belarus
+slovakia
+greece
+georgia
+switzerland
+netherlands
+kazakhastan
+hungary
+andora
+
+belarus
+slovakia
+greece
+georgia
+kazakhastan
+switzerland
+netherlands
+hungary
+andora
+
+{
+Voting
+andora : Regular(0) Judge(0)
+belarus : Regular(1) Judge(15)
+georgia : Regular(0) Judge(10)
+greece : Regular(1) Judge(10)
+hungary : Regular(0) Judge(0)
+kazakhastan : Regular(2) Judge(0)
+netherlands : Regular(0) Judge(0)
+slovakia : Regular(0) Judge(14)
+switzerland : Regular(0) Judge(0)
+}
+

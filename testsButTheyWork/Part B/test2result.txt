@@ -1,0 +1,172 @@
+[israel/song_israel/131/singer_israel]
+[georgia/song_georgia/182/singer_georgia]
+[greece/song_greece/216/singer_greece]
+[greece/song_greece/211/singer_greece]
+[croatia/song_croatia/224/singer_croatia]
+[malta/song_malta/212/singer_malta]
+[malta/song_malta/168/singer_malta]
+[russia/song_russia/107/singer_russia]
+[belarus/song_belarus/183/singer_belarus]
+[moldova/song_moldova/193/singer_moldova]
+[estonia/song_estonia/122/singer_estonia]
+[belarus/song_belarus/173/singer_belarus]
+[turkey/song_turkey/167/singer_turkey]
+[lithiania/song_lithiania/184/singer_lithiania]
+[bulgaria/song_bulgaria/129/singer_bulgaria]
+[malta/song_malta/228/singer_malta]
+[croatia/song_croatia/215/singer_croatia]
+[greece/song_greece/194/singer_greece]
+[turkey/song_turkey/173/singer_turkey]
+[estonia/song_estonia/129/singer_estonia]
+[austria/song_austria/123/singer_austria]
+[italy/song_italy/112/singer_italy]
+[switzerland/song_switzerland/164/singer_switzerland]
+[georgia/song_georgia/209/singer_georgia]
+[austria/song_austria/164/singer_austria]
+[cyrpus/song_cyrpus/116/singer_cyrpus]
+[russia/song_russia/220/singer_russia]
+[latvia/song_latvia/128/singer_latvia]
+[serbia/song_serbia/200/singer_serbia]
+[bosnia/song_bosnia/109/singer_bosnia]
+[ireland/song_ireland/153/singer_ireland]
+[norway/song_norway/147/singer_norway]
+[belgium/song_belgium/141/singer_belgium]
+[ukraine/song_ukraine/228/singer_ukraine]
+[italy/song_italy/132/singer_italy]
+[austria/song_austria/189/singer_austria]
+{
+Registration
+}
+
+{
+Registration
+[belgium/song_belgium/141/singer_belgium]
+[bosnia/song_bosnia/109/singer_bosnia]
+[latvia/song_latvia/128/singer_latvia]
+[malta/song_malta/168/singer_malta]
+[russia/new_song/114/newsinger]
+[turkey/song_turkey/167/singer_turkey]
+}
+
+{
+Registration
+[belarus/song_belarus/173/singer_belarus]
+[belgium/song_belgium/141/singer_belgium]
+[bosnia/song_bosnia/109/singer_bosnia]
+[italy/song_italy/112/singer_italy]
+[latvia/song_latvia/128/singer_latvia]
+[malta/song_malta/168/singer_malta]
+[norway/new_song/147/singer_norway]
+[turkey/song_turkey/167/singer_turkey]
+}
+
+[belarus/song_belarus/173/singer_belarus]
+[belgium/song_belgium/141/singer_belgium]
+[bosnia/song_bosnia/109/singer_bosnia]
+[italy/song_italy/112/singer_italy]
+[latvia/song_latvia/128/singer_latvia]
+[malta/song_malta/168/singer_malta]
+[norway/new_song/147/singer_norway]
+[turkey/song_turkey/167/singer_turkey]
+[belarus/song_belarus/173/singer_belarus]
+[belgium/song_belgium/141/singer_belgium]
+[bosnia/song_bosnia/109/singer_bosnia]
+[italy/song_italy/112/singer_italy]
+[latvia/song_latvia/128/singer_latvia]
+[malta/song_malta/168/singer_malta]
+[norway/new_song/147/singer_norway]
+[turkey/song_turkey/167/singer_turkey]
+[greece/new_song/120/newsinger]
+[belarus/song_belarus/173/singer_belarus]
+[ireland/new_song/120/newsinger]
+[greece/new_song/120/newsinger]
+[lithiania/song_lithiania/120/singer_lithiania]
+[belarus/song_belarus/120/singer_belarus]
+[greece/song_greece/120/singer_greece]
+[georgia/new_song/120/newsinger]
+[croatia/song_croatia/120/singer_croatia]
+[greece/song_greece/120/singer_greece]
+[croatia/song_croatia/120/singer_croatia]
+[georgia/song_georgia/120/singer_georgia]
+[italy/song_italy/120/singer_italy]
+[italy/song_italy/120/singer_italy]
+{
+Voting
+belarus : Regular(0) Judge(0)
+belgium : Regular(0) Judge(0)
+bosnia : Regular(0) Judge(0)
+italy : Regular(0) Judge(0)
+latvia : Regular(0) Judge(0)
+malta : Regular(0) Judge(0)
+norway : Regular(0) Judge(0)
+turkey : Regular(0) Judge(0)
+}
+
+[norway/new_song/147/singer_norway]
+[austria/shouldnot/143/error]
+[israel/shouldnot/143/error]
+[austria/shouldnot/143/error]
+[malta/shouldnot/143/error]
+[italy/song_italy/112/singer_italy]
+[greece/shouldnot/143/error]
+[belarus/song_belarus/173/singer_belarus]
+[croatia/shouldnot/143/error]
+[croatia/shouldnot/143/error]
+[switzerland/shouldnot/143/error]
+[greece/shouldnot/143/error]
+[malta/shouldnot/143/error]
+[latvia/song_latvia/128/singer_latvia]
+{
+Voting
+belarus : Regular(0) Judge(0)
+belgium : Regular(0) Judge(0)
+bosnia : Regular(1) Judge(0)
+italy : Regular(1) Judge(0)
+latvia : Regular(1) Judge(36)
+malta : Regular(2) Judge(10)
+norway : Regular(2) Judge(12)
+turkey : Regular(0) Judge(7)
+}
+
+norway
+malta
+latvia
+italy
+bosnia
+turkey
+belgium
+belarus
+
+
+latvia
+norway
+malta
+turkey
+italy
+bosnia
+belgium
+belarus
+
+
+latvia
+norway
+malta
+turkey
+italy
+bosnia
+belgium
+belarus
+
+
+{
+Voting
+belarus : Regular(0) Judge(0)
+belgium : Regular(0) Judge(0)
+bosnia : Regular(1) Judge(0)
+italy : Regular(1) Judge(0)
+latvia : Regular(1) Judge(36)
+malta : Regular(2) Judge(10)
+norway : Regular(2) Judge(12)
+turkey : Regular(0) Judge(7)
+}
+

@@ -155,3 +155,24 @@ Israel : Regular(1) Judge(0)
 UK : Regular(1) Judge(10)
 }
 
+
+TEST 1.17.1
+Cyprus
+UK
+Israel
+Australia
+
+
+TEST 1.17.2
+Cyprus
+UK
+Australia
+Israel
+
+
+TEST 1.17.3
+Cyprus
+UK
+Australia
+Israel
+
