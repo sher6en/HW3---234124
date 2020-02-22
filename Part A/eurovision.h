@@ -146,6 +146,9 @@ public:
 	bool legalParticipant(const Participant& participant) const;  // Done.
 	bool participate(String state_name) const;  // Done.
 
+	class Iterator;
+	Iterator begin() const;
+	Iterator end() const;
 // need to define here possibly c'tr and d'tr and ONLY methods that
 // are mentioned and demonstrated in the test example that has been published.
 // NO OTHER METHODS SHOULD APPEAR HERE.
@@ -156,4 +159,21 @@ public:
 
 // -----------------------------------------------------------
 
+class MainControl::Iterator {
+	const MainControl* mainControl;
+	int index;
+	Iterator(const MainControl* mainControl, int index);
+	
+	friend class MainControl;
+	
+public:
+
+	Iterator() = default; //Check if this needs to be private
+	const Participant& operator*() const;
+	Iterator& operator++();
+	bool operator==(const Iterator& iterator) const;
+	bool operator<(const Iterator& iterator) const;
+	
+	//Do you need to delete = operator and copy c'tor?
+};
 #endif

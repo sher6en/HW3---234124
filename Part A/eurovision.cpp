@@ -3,7 +3,7 @@
 
 //==============================================================================Helper functions delclerations:
 
-static void swap(Participant **xp, Participant **yp);
+static void participantPointerSwap(Participant **pointer1, Participant **pointer2);
 static void participant_bubbleSort(Participant** arr, int n);
 
 //==============================================================================End of helper functions delclerations.
@@ -317,7 +317,7 @@ MainControl& MainControl::operator-=(const Participant& participant){
 
 	participants[index]->updateRegistered(false);
 	participants[index] = NULL;
-	swap(&participants[index], &participants[current_participants_number-1]);
+	participantPointerSwap(&participants[index], &participants[current_participants_number-1]);
 	current_participants_number--;
 	
 	participant_bubbleSort(participants, current_participants_number);
@@ -379,15 +379,51 @@ bool MainControl::participate(String state_name) const{
 	}
 	return false;
 }
+
+MainControl::Iterator MainControl::begin() const{
+	return Iterator(this, 0); //Check if not &this
+}
+
+MainControl::Iterator MainControl::end() const{
+	return Iterator(this, current_participants_number); //Check if this really needs to be current_participants_number.
+}
 //==============================================================================End of MainControl functions.
+
+//==============================================================================MainControl Iterator functions.
+
+MainControl::Iterator::Iterator(const MainControl* mainControl, int index) : mainControl(mainControl), index(index) {}
+
+const Participant& MainControl::Iterator::operator*() const {
+	return (*(mainControl->participants[index]));
+}
+
+MainControl::Iterator& MainControl::Iterator::operator++() {
+	++index;
+	return *this;
+}
+
+bool MainControl::Iterator::operator==(const Iterator& iterator) const {
+	if (this->index == iterator.index){
+		return true;
+	}
+	return false;
+}
+
+bool MainControl::Iterator::operator<(const Iterator& iterator) const {
+	if (this->index < iterator.index){
+		return true;
+	}
+	return false;
+}
+
+//==============================================================================End of MainControl Iterator functions.
 
 //==============================================================================Helper functions:
 
-static void swap(Participant **xp, Participant **yp)  
-{  
-    Participant *temp = *xp;  
-    *xp = *yp;  
-    *yp = temp;  
+static void participantPointerSwap(Participant **pointer1, Participant **pointer2) {  
+    Participant *temp = *pointer1;  
+    *pointer1 = *pointer2;  
+    *pointer2 = temp;  
 }  
   
 // A function to implement bubble sort  
@@ -399,7 +435,7 @@ static void participant_bubbleSort(Participant** arr, int n)
 		for (j = 0; j < n-i-1; j++) {
 			if (arr[j]->state() > arr[j+1]->state()){
 				//cout << "j: " <<arr[j]->state() << ", j+1:" << arr[j+1]->state() << endl;
-				swap(&arr[j], &arr[j+1]);  
+				participantPointerSwap(&arr[j], &arr[j+1]);  
 			}
 		}
 	}

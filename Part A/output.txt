@@ -45,8 +45,24 @@ Registration
 }
 
 
+TEST 1.7.1
+[Australia/Song_Australia/180/Singer_Australia]
+[Cyprus/Song_Cyprus/172/Singer_Cyprus]
+[Israel/Song_Israel/175/Singer_Israel]
+[UK/Song_UK/170/Singer_UK]
+
+TEST 1.7.2
+[Australia/Song_Australia/180/Singer_Australia]
+[Cyprus/Song_Cyprus/172/Singer_Cyprus]
+[Israel/Song_Israel/175/Singer_Israel]
+[UK/Song_UK/170/Singer_UK]
+
+TEST 1.7.3
+
 TEST 1.8
-10
+1
+0
+
 TEST 1.9
 [UK/Song_UK/170/Singer_UK]
 [UK/Song_UK/170/Singer_UK]
