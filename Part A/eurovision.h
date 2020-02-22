@@ -168,7 +168,7 @@ class MainControl::Iterator {
 	
 public:
 
-	Iterator() = default; //Check if this needs to be private
+	Iterator() : mainControl(NULL), index(0) {}
 	const Participant& operator*() const;
 	Iterator& operator++();
 	bool operator==(const Iterator& iterator) const;

@@ -382,7 +382,7 @@ bool MainControl::participate(String state_name) const{
 
 MainControl::Iterator MainControl::begin() const{
 	return Iterator(this, 0); //Check if not &this
-}
+} //Why not Iterator::Iterator(this, 0)?
 
 MainControl::Iterator MainControl::end() const{
 	return Iterator(this, current_participants_number); //Check if this really needs to be current_participants_number.
@@ -403,7 +403,7 @@ MainControl::Iterator& MainControl::Iterator::operator++() {
 }
 
 bool MainControl::Iterator::operator==(const Iterator& iterator) const {
-	if (this->index == iterator.index){
+	if (index == iterator.index && mainControl == iterator.mainControl /* Check if whats after the && is needed*/){
 		return true;
 	}
 	return false;
