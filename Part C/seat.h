@@ -8,7 +8,7 @@ using std::exception;
  Check that all price increases are correct.
  In all printing functions check if its okay to define helper functions in cpp file so there isnt code duplication.
  Check if classes need copy constractor.
- Check if there can be couple of seats with the same place.
+ Check if there can be couple of seats with the same place, or its not needed to check such thing.
  For regular seats, check if area will always be in range - 'A' to 'Z'.
 */
 
@@ -30,7 +30,7 @@ protected:
 	
 public:
 	Seat() = delete; //We don't want a default constractor. Check if there is a need to delete the constractor.
-	Seat(int row, int seat, int base_price) :  //Check if there is a default constractor/default values.
+	Seat(int row, int seat, int base_price) :  //Check if there are default values.
 	  row(row), seat(seat), base_price(base_price){}
 	virtual ~Seat() {}
 	virtual int price() const = 0;

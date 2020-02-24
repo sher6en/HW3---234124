@@ -1,16 +1,19 @@
 #include <iostream>
 #include "eurovision.h"
-#include <vector>
 
+//Used only in part B.
+#include <vector>
 using std::vector;
 
 //==============================================================================Helper functions and class delclerations:
-
 static void participantPointerSwap(Participant **pointer1, Participant **pointer2);
 static void participant_bubbleSort(Participant** arr, int n);
+
 template<typename Iterator>
 Iterator get(Iterator first, Iterator end, int place);
 
+//This struct is used in Part B section 3, in order to store data about the 
+//participanting states more conviniantly.
 struct StatePlace {
 	int points;
 	String state;
@@ -78,6 +81,7 @@ char* String::allocate_and_copy(const char* str, int size) {
 	return strcpy(new char[size + 1], str);
 }
 
+//Everything from here until the end of the string class related funcitons was copied from the lectures.
 String::String(const char* str) {
 	length = strlen(str);
 	data = allocate_and_copy(str, length);
@@ -254,7 +258,7 @@ MainControl::MainControl(int song_time, int max_participants, int max_vote_amoun
 					judge_votes(new int [max_participants]), current_participants_number(0), current_phase(Registration), 
 					max_participants(max_participants), max_song_time(song_time), max_vote_amount(max_vote_amount) {
 						for (int i=0; i<max_participants; i++) {
-							participants[i] = NULL; //Check this is actually needed (If pointers are inisiated (knowing english is nice) to NULL). Check if we should use nullptr.
+							participants[i] = NULL; 
 							regular_votes[i] = 0;
 							judge_votes[i] = 0;
 						}
@@ -282,7 +286,7 @@ MainControl& MainControl::operator+=(const Participant& participant){
 	
 	//Participant participant_copy(participant.state(),participant.song(),participant.timeLength(),participant.singer());
 	/* participants[current_participants_number++] = (new Participant(participant.state(),participant.song(),participant.timeLength(),participant.singer()));
-	//WHY DO YOU NEED new here? */
+	//WHY DO YOU NEED new HERE? */
 	participants[current_participants_number++] = &(const_cast <Participant&>(participant));
 	participants[current_participants_number-1]->updateRegistered(true);
 	participant_bubbleSort(participants, current_participants_number);
@@ -299,7 +303,8 @@ MainControl& MainControl::operator+=(const Vote& vote) {
 			for (int i = 0; i<current_participants_number; i++){
 				if (vote.states[0] == participants[i]->state()){
 					regular_votes[i]++;
-					++(const_cast <Voter&>(vote.voter));
+					//Compiler gives warning when trying to pass Vote as not const, so const cast is needed.
+					++(const_cast <Voter&>(vote.voter)); 
 					return *this;
 				}
 			}
@@ -315,6 +320,7 @@ MainControl& MainControl::operator+=(const Vote& vote) {
 							case 1: judge_votes[i]+=10; break;
 							default: judge_votes[i]+=(10-j); break;
 						}
+						//Compiler gives warning when trying to pass Vote as not const, so const cast is needed.
 						++(const_cast <Voter&>(vote.voter));
 						break;
 					}
@@ -361,7 +367,7 @@ std::ostream& operator<<(std::ostream& os, const MainControl& system){
 			}
 			break;
 		case Contest:
-			cout<<"Contest"<<endl;
+			cout<<"Contest"<<endl; //Is anything more needed?
 			break;
 		case Voting:
 			cout<<"Voting"<<endl;
@@ -383,6 +389,7 @@ String MainControl::operator()(int index, VoterType type){
 	
 	int j = 0;
 	vector<StatePlace>::iterator i = states.begin();
+	
 	switch(type){
 		case Regular:
 			for (; i != states.end(); ++i, ++j){
@@ -403,11 +410,12 @@ String MainControl::operator()(int index, VoterType type){
 			}
 			break;
 	}
+	
 	vector<StatePlace>::iterator winner = get(states.begin(), states.end(), index);
 	return ((*winner).state);
 }
 
-void MainControl::setPhase(Phase phase) { //Check this works. Check if you can't go back (like from Con to Reg)
+void MainControl::setPhase(Phase phase) { //Check if you can't go back (like from Con to Reg)
 	if (current_phase==Registration && phase==Contest){
 		current_phase = phase;
 	}
@@ -420,7 +428,7 @@ bool MainControl::legalParticipant(const Participant& participant) const{
     if ((participant.state()=="") ||
         (participant.song()=="") ||
         (participant.singer()=="") ||
-        (participant.timeLength()>max_song_time)){  // Check if negative? Define as unsigned?
+        (participant.timeLength()>max_song_time)){  //Check if negative? Define as unsigned?
         return false;
     }
     return true;
@@ -436,7 +444,7 @@ bool MainControl::participate(String state_name) const{
 }
 
 MainControl::Iterator MainControl::begin() const{
-	return Iterator(this, 0); //Check if not &this
+	return Iterator(this, 0);
 } //Why not Iterator::Iterator(this, 0)?
 
 MainControl::Iterator MainControl::end() const{
@@ -480,16 +488,13 @@ static void participantPointerSwap(Participant **pointer1, Participant **pointer
     *pointer1 = *pointer2;  
     *pointer2 = temp;  
 }  
-  
-// A function to implement bubble sort  
-static void participant_bubbleSort(Participant** arr, int n)  
+ 
+static void participantBubbleSort(Participant** arr, int n)  
 {  
     int i, j;  
     for (i = 0; i < n-1; i++){
-		// Last i elements are already in place  
 		for (j = 0; j < n-i-1; j++) {
 			if (arr[j]->state() > arr[j+1]->state()){
-				//cout << "j: " <<arr[j]->state() << ", j+1:" << arr[j+1]->state() << endl;
 				participantPointerSwap(&arr[j], &arr[j+1]);  
 			}
 		}
@@ -515,6 +520,7 @@ Iterator get(Iterator first, Iterator end, int place) {
 		}
 	}
 	
+	//Each loop we find the max value thats smaller then the last max value.
 	for (int i = 1; i<place; i++){
 		Iterator current_loop_max = min;
 		for (Iterator temp = first; temp != end; ++temp){
@@ -524,6 +530,7 @@ Iterator get(Iterator first, Iterator end, int place) {
 		}
 		current_max = current_loop_max;
 	}
+	
 	return current_max;
 }
 

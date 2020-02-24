@@ -18,7 +18,7 @@ using std::endl;
 using std::cerr;
 using std::ostream;
 
-//String CLASS:
+//String CLASS (copied from lecture):
 
 class String {
 	int length;
@@ -82,7 +82,7 @@ std::ostream& operator<<(std::ostream& os,const Participant& participant);
 
 class Voter
 {
-	String country_name; //Possibly Const, Check.
+	String country_name; //Possibly Const, Check. If this is const, why is state in participant not const?
 	VoterType type;
 	int number_of_votes;
 
@@ -135,21 +135,22 @@ class MainControl
 public:
 
 	MainControl(int song_time = 180, int max_participants = 26, int max_vote_amount = 5);  // Done.
-	~MainControl();  // Done.
+	~MainControl();
 
-	MainControl& operator+=(const Participant& participant);  // Check if const place is correct. Done.
-	MainControl& operator+=(const Vote& vote); //Cant be const because updating voter num of votes. Check if you cant change this.
-	MainControl& operator-=(const Participant& participant);  // Done.
+	MainControl& operator+=(const Participant& participant);  // Check if const place is correct.
+	MainControl& operator+=(const Vote& vote); //Cant be const because updating voter num of votes. Check if this is changable.
+	MainControl& operator-=(const Participant& participant); 
 	friend std::ostream& operator<<(std::ostream& os, const MainControl& system);
 	String operator()(int index, VoterType type);
 	
-	void setPhase(Phase phase);  // Done.
-	bool legalParticipant(const Participant& participant) const;  // Done.
-	bool participate(String state_name) const;  // Done.
+	void setPhase(Phase phase);
+	bool legalParticipant(const Participant& participant) const;
+	bool participate(String state_name) const;
 
 	class Iterator;
 	Iterator begin() const;
 	Iterator end() const;
+	
 // need to define here possibly c'tr and d'tr and ONLY methods that
 // are mentioned and demonstrated in the test example that has been published.
 // NO OTHER METHODS SHOULD APPEAR HERE.
