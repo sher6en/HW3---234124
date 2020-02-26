@@ -103,14 +103,14 @@ ukraine : Regular(0) Judge(0)
 
 {
 Voting
-armenia : Regular(0) Judge(24)
-italy : Regular(0) Judge(62)
-lithiania : Regular(0) Judge(81)
-norway : Regular(0) Judge(46)
-russia : Regular(0) Judge(72)
-slovakia : Regular(1) Judge(47)
-spain : Regular(2) Judge(52)
+armenia : Regular(0) Judge(0)
+italy : Regular(0) Judge(12)
+lithiania : Regular(0) Judge(22)
+norway : Regular(0) Judge(12)
+russia : Regular(0) Judge(26)
+slovakia : Regular(1) Judge(5)
+spain : Regular(2) Judge(30)
 uk : Regular(0) Judge(0)
-ukraine : Regular(0) Judge(46)
+ukraine : Regular(0) Judge(27)
 }
 

@@ -98,11 +98,11 @@ uk : Regular(0) Judge(0)
 
 {
 Voting
-andora : Regular(1) Judge(125)
-estonia : Regular(1) Judge(75)
-israel : Regular(0) Judge(44)
-moldova : Regular(1) Judge(71)
-serbia : Regular(0) Judge(45)
+andora : Regular(1) Judge(20)
+estonia : Regular(1) Judge(17)
+israel : Regular(0) Judge(28)
+moldova : Regular(1) Judge(7)
+serbia : Regular(0) Judge(0)
 uk : Regular(0) Judge(0)
 }
 

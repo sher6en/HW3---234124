@@ -1,20 +1,9 @@
-
 #include <iostream>
-
 #include "eurovision.h"
 
-using std::cout;
-using std::endl;
-#include <fstream>
-using std::ifstream;
-using std::ofstream;
-using std::cerr;
-using std::endl;
-
-
-void TEST10() {
-    ofstream to("../test10myresult.txt");
-    Participant p34("germany", "song_germany", 137, "singer_germany");
+int main(){
+	
+Participant p34("germany", "song_germany", 137, "singer_germany");
 
     {
     MainControl eurovision;
@@ -598,4 +587,5 @@ MainControl eurovisioncheck;
     eurovisioncheck.setPhase(Contest);
     cout<<eurovisioncheck<<endl;
     cout<<eurovisioncheck(1,All)<<endl;
+	return 1;
 }

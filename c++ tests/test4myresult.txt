@@ -102,12 +102,12 @@ serbia : Regular(0) Judge(0)
 
 {
 Voting
-andora : Regular(0) Judge(55)
-armenia : Regular(0) Judge(40)
-croatia : Regular(1) Judge(75)
-france : Regular(2) Judge(33)
-israel : Regular(1) Judge(35)
-russia : Regular(0) Judge(34)
-serbia : Regular(0) Judge(52)
+andora : Regular(0) Judge(4)
+armenia : Regular(0) Judge(3)
+croatia : Regular(1) Judge(0)
+france : Regular(2) Judge(0)
+israel : Regular(1) Judge(18)
+russia : Regular(0) Judge(0)
+serbia : Regular(0) Judge(15)
 }
 

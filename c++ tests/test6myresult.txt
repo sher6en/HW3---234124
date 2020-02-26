@@ -109,16 +109,16 @@ switzerland : Regular(0) Judge(0)
 
 {
 Voting
-austria : Regular(0) Judge(46)
-belarus : Regular(1) Judge(56)
-bosnia : Regular(2) Judge(70)
-germany : Regular(0) Judge(34)
-italy : Regular(0) Judge(19)
-latvia : Regular(2) Judge(35)
-luxembourg : Regular(0) Judge(58)
-malta : Regular(3) Judge(46)
-norway : Regular(0) Judge(45)
-slovakia : Regular(1) Judge(28)
-switzerland : Regular(1) Judge(46)
+austria : Regular(0) Judge(28)
+belarus : Regular(1) Judge(10)
+bosnia : Regular(2) Judge(20)
+germany : Regular(0) Judge(10)
+italy : Regular(0) Judge(0)
+latvia : Regular(2) Judge(0)
+luxembourg : Regular(0) Judge(25)
+malta : Regular(3) Judge(8)
+norway : Regular(0) Judge(25)
+slovakia : Regular(1) Judge(12)
+switzerland : Regular(1) Judge(20)
 }
 

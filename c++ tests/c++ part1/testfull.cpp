@@ -3,7 +3,7 @@
 
 int main(){
 	
-	MainControl eurovision;
+MainControl eurovision;
     Participant p1("georgia","song_georgia",194,"singer_georgia");
     cout<<p1<<endl;
     Participant p2("belarus","song_belarus",201,"singer_belarus");

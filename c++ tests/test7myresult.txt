@@ -109,15 +109,15 @@ uk : Regular(0) Judge(0)
 
 {
 Voting
-austria : Regular(1) Judge(32)
-belgium : Regular(1) Judge(19)
-bulgaria : Regular(0) Judge(38)
-france : Regular(2) Judge(17)
-italy : Regular(1) Judge(39)
-kazakhastan : Regular(1) Judge(23)
-latvia : Regular(2) Judge(66)
-russia : Regular(1) Judge(33)
-switzerland : Regular(0) Judge(34)
+austria : Regular(1) Judge(0)
+belgium : Regular(1) Judge(0)
+bulgaria : Regular(0) Judge(19)
+france : Regular(2) Judge(0)
+italy : Regular(1) Judge(24)
+kazakhastan : Regular(1) Judge(10)
+latvia : Regular(2) Judge(8)
+russia : Regular(1) Judge(0)
+switzerland : Regular(0) Judge(0)
 uk : Regular(0) Judge(0)
 }
 
